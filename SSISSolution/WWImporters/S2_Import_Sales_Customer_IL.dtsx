@@ -1,0 +1,2616 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/9/2019 10:38:06 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-KD25EBE"
+  DTS:CreatorName="DESKTOP-KD25EBE\rkwuser"
+  DTS:DTSID="{23578128-A890-4668-BFEF-986731AA504F}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="7177"
+  DTS:ObjectName="S2_Import_Sales_Customer IL"
+  DTS:PackageType="5"
+  DTS:VersionBuild="196"
+  DTS:VersionGUID="{5DF26785-A340-45BD-A0DD-5838E03867A1}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Errors file]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{91981C33-DFC7-4212-8A2C-0734B7FED920}"
+      DTS:ObjectName="Errors file">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::Error_Files_Folder] + @[System::PackageName] + "_" +  @[User::IB_String] + "_Errors.csv"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="7177"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\DW2026\ErrorFiles\S2_Import_Sales_Customer IL_202412_Errors.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_ID"
+              DTS:DTSID="{0A75F609-72CE-49CC-9AA4-134B28E24955}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_Name"
+              DTS:DTSID="{9EE00725-2BE7-462A-9068-BC33F5E61958}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_Category_ID"
+              DTS:DTSID="{ECCA0E69-8A83-4CAA-97D9-5F4C3591ADBF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_Buying_Group_Name"
+              DTS:DTSID="{8B927EEA-54A1-4603-8DDE-3F3EE52BD174}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="10"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_Credit_Limit"
+              DTS:DTSID="{E3D98A6F-0A4D-4C60-8073-8A5C0EFFA3B5}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_Account_Opened_Date"
+              DTS:DTSID="{58A26F09-E9E1-40B2-ABD7-247C617D695C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IBPT_ID"
+              DTS:DTSID="{315B0B3A-5846-4733-AB9C-339A90EFCA25}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{1A057441-A1AC-4B65-AAD2-E273E53FC41E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{D17D7951-2911-49E7-9635-91D1BFDEBB3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorDescription"
+              DTS:DTSID="{7324C1AA-247D-4636-BA5C-4508FDB5D9F8}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Screen file]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{DEB2F44C-5836-4BF4-8E8A-9D9F312E9481}"
+      DTS:ObjectName="Screen file">
+      <DTS:PropertyExpression
+        DTS:Name="ConnectionString">@[$Project::Error_Files_Folder] + @[System::PackageName] + "_" +  @[User::IB_String] + "_Screens.csv"</DTS:PropertyExpression>
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="7177"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\DW2026\ErrorFiles\S2_Import_Sales_Customer IL_202412_Screens.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_ID"
+              DTS:DTSID="{C5D97A42-733C-4CF5-A576-C0521D7CE4DA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_Name"
+              DTS:DTSID="{2E64CA1D-D4F3-4DEE-96D9-0C640C1C96A4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_Category_ID"
+              DTS:DTSID="{9F5512CD-B3BA-4011-ABA4-1EC96A19F070}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_Buying_Group_Name"
+              DTS:DTSID="{CEC1C5D0-7076-4291-9AE7-00AA561CE52F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="10"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_Credit_Limit"
+              DTS:DTSID="{33E22D17-5E3E-44E0-82A2-015B5E13C226}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="10"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Customer_Account_Opened_Date"
+              DTS:DTSID="{461FBE0D-23A6-42A0-9EE5-43F54546DC40}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="44"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorDescription"
+              DTS:DTSID="{584CBE8B-505D-4783-8D27-8BDAABBCF6B8}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{4F01547D-F2CF-4936-9228-D6A5B87BE7B2}"
+      DTS:ObjectName="IBP_ID">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">0</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{EC8EEAB9-B4F8-4F51-A989-786FC86BE8D4}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="GETDATE()"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Current_DateTime">
+      <DTS:VariableValue
+        DTS:DataType="7">9/21/2026 10:21:57 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{81D93A5C-0107-4EFD-9EAD-E22E30E7D4B0}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="IBPT_ID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{CAD75C61-D2B7-4584-883A-F0F253A2FCD8}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="IBPT_Records_Failed">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{918EE79D-E84A-4A8E-B805-1E1982B1884B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="IBPT_Records_In">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{FBDCA1E8-6098-41EA-9B63-B04DCC73919C}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::IBPT_Records_In]- @[User::IBPT_Records_Failed]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="IBPT_Records_Out">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{0E3A94BB-9ED3-444C-9DF4-4169E9D0F0C8}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="(DT_WSTR, 4)( @[$Project::IB_Year]  ) +   (DT_WSTR, 2)( @[$Project::IB_Month]  )"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="IB_String">
+      <DTS:VariableValue
+        DTS:DataType="8">202412</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Create Import_Batch_Process_Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{BC46C2A3-5DC4-42AB-9CA7-FBBB4709E3DA}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create Import_Batch_Process_Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{81A86D9D-04A8-4253-8162-2AB18189596A}"
+          SQLTask:IsStoredProc="True"
+          SQLTask:SqlStatementSource="Create_Import_Batch_Process_Task" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="RC"
+            SQLTask:DtsVariableName="User::IBPT_ID"
+            SQLTask:ParameterDirection="ReturnValue"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBP_ID"
+            SQLTask:DtsVariableName="$Package::IBP_ID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBPT_Description"
+            SQLTask:DtsVariableName="System::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="16"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBPT_Start"
+            SQLTask:DtsVariableName="User::Current_DateTime"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="6"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Import Sales Customer_IL"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{55330663-E2BC-4750-BAEA-B1151B77AA81}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import Sales Customer_IL"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import Sales Customer_IL\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Import Sales Customer_IL\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Import Sales Customer_IL\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[IBPT_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[IBPT_ID]"
+                      name="IBPT_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">@[User::IBPT_ID]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::IBPT_ID]</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Customer_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="8"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Customer_Name]"
+                      name="Customer_Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"*Unknown"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"*Unknown"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Customer_Category_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Customer_Category_ID]"
+                      name="Customer_Category_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">-1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">-1</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Customer_Buying_Group]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      length="16"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Customer_Buying_Group]"
+                      name="Customer_Buying_Group"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"*No buying group"</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"*No buying group"</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Customer_Account_Opened_Date]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Customer_Account_Opened_Date]"
+                      name="Customer_Account_Opened_Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DBDATE)(1900 - 01 - 01)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBDATE)(1900 - 01 - 01)</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Credit limit]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Credit limit]"
+                      name="Credit limit"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">-1</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">-1</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Import Sales Customer_IL\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Sales Customer_IL\Get Error Description"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;12"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Get Error Description"
+              version="14">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_5a909b773a164575bb31e48eb6bd9709")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_5a909b773a164575bb31e48eb6bd9709")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Input0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public Int32 ErrorCode
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[0]);
+        }
+    }
+    public bool ErrorCode_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+    }
+
+    public String ErrorDescription
+    {
+        set
+        {
+            this[1] = value;
+        }
+    }
+    public bool ErrorDescription_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(1);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_5a909b773a164575bb31e48eb6bd9709.Properties.Settings.get_Default():SC_5a909b773a164575bb31e48eb6bd9709.Properties.Sett" +
+    "ings")]
+
+namespace SC_5a909b773a164575bb31e48eb6bd9709.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>SC_5a909b773a164575bb31e48eb6bd9709</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>SC_5a909b773a164575bb31e48eb6bd9709</msb:DisplayName>
+    <msb:ProjectId>{E8AED8A5-1635-4F89-8CCB-26D5AF05A3A9}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_5a909b773a164575bb31e48eb6bd9709.csproj" />
+    <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_5a909b773a164575bb31e48eb6bd9709.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62cbd772-00bf-440d-a5bc-e595b345b767}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_5a909b773a164575bb31e48eb6bd9709</RootNamespace>
+    <AssemblyName>SC_5a909b773a164575bb31e48eb6bd9709</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=17.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=17.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=17.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=17.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_5a909b773a164575bb31e48eb6bd9709" IconIndex="0"></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC170</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_5a909b773a164575bb31e48eb6bd9709.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_5a909b773a164575bb31e48eb6bd9709.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_5a909b773a164575bb31e48eb6bd9709.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_5a909b773a164575bb31e48eb6bd9709.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_5a909b773a164575bb31e48eb6bd9709.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_5a909b773a164575bb31e48eb6bd9709.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAOoCuWkAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAdjIA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAACQyAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAfBIAAAAgAAAAFAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAABY
+MgAAAAAAAEgAAAACAAUAtCEAALgPAAABAAAAAAAAAGwxAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACipiAwIoEgAACgNvBgAABm8TAAAK
+bwgAAAYqHgIoDAAABioqAgMEBSgUAAAKKlICexUAAAoCexYAAAoWlG8XAAAKKiICFigYAAAKKiYC
+FwMoGQAACipaAywIAhcoGgAACipyAQAAcHMbAAAKeh4CKBwAAAoqHgIoHQAACip+AigeAAAKAgJz
+EAAABn0BAAAEAgJzEQAABn0CAAAEKpIEcp4AAHAabx8AAAosFQIFAgMoIAAACg4EcwUAAAZvDgAA
+BipKKwcCA28PAAAGA28KAAAGLfEqBio6AighAAAKAgN9AwAABCo6AighAAAKAgN9BAAABCoeAigh
+AAAKKq5+BQAABC0ecq4AAHDQBwAAAigiAAAKbyMAAApzJAAACoAFAAAEfgUAAAQqGn4GAAAEKh4C
+gAYAAAQqGn4HAAAEKh4CKCUAAAoqLnMXAAAGgAcAAAQqAAAAQlNKQgEAAQAAAAAADAAAAHY0LjAu
+MzAzMTkAAAAABQBsAAAAjAUAACN+AAD4BQAA4AYAACNTdHJpbmdzAAAAANgMAAAgAQAAI1VTAPgN
+AAAQAAAAI0dVSUQAAAAIDgAAsAEAACNCbG9iAAAAAAAAAAIAAAFXFaABCQEAAAD6ATMAFgAAAQAA
+ACAAAAAIAAAABwAAABgAAAAPAAAAJQAAABAAAAADAAAABwAAAAgAAAABAAAABQAAAAEAAAAAADAD
+AQAAAAAABgAqAhYFBgC+AhYFBgB2AQMFDwCKBQAABgCjAeIDBgANAuIDBgDuAeIDBgClAuIDBgBK
+AuIDBgBjAuIDBgC6AeIDBgDVAfkCCgB+AsMACgCsBMMADgCdBMMACgBUBMMACgBQBsMABgATBpoD
+BgBZAQMFBgC9BDYFBgBIBM0DEgApARoDEgCKARoDEgARAbgDBgA+ARYFFgABAM0EBgD0A5oDBgAT
+A5oDBgA3BJoDBgDkAJoDBgCVAJoDBgDVBuIDAAAAAEcAAAAAAAEAAQABABAArQMAABAAAQABAAEA
+EACQBAAAOQABAAUAAQAQADIGAABFAAEADAABABAABwYAAEkAAwAQAAEAEADIBQAASQAEABEAAAAQ
+AD0FmQVJAAUAEgAAARAA9wWZBWEABwAWAAYABwZ/AAYAyAWDAAEAQAaHAAEAQAaHABEAoQOLABEA
+AQGPABEAdwCTAFAgAAAAAMYA3AIGAAEAWCAAAAAAxgDnAgYAAQBgIAAAAADGALIGlwABAHkgAAAA
+AIYY9gQGAAIAgSAAAAAAhhj2BCUAAgCMIAAAAACGCIcAnQAFAKEgAAAAAIYIWANHAAUAqiAAAAAA
+hggOBBAABQC0IAAAAACGCG0DoQAGAMsgAAAAAIYAyQZHAAcA0yAAAAAAhgAaBkcABwDbIAAAAACG
+GPYEBgAHAPsgAAAAAMYApQamAAcAICEAAAAAxgGeBpcACwAzIQAAAADGAbIGlwAMADUhAAAAAIYY
+9gSwAA0ARCEAAAAAhhj2BLAADgBTIQAAAACDGPYEBgAPAFshAAAAAJMIuQS2AA8AhyEAAAAAkwjp
+ALsADwCOIQAAAACTCPUAwAAPAJYhAAAAAJYIJgbGABAAnSEAAAAAhhj2BAYAEAClIQAAAACRGPwE
+ywAQAAAAAQDNBgAAAQCyBAAAAgDSBQAAAwBiBAAAAQDzAgAAAQDzAgAAAQBQAAAAAgC5AAAAAwCy
+BAAABABiBAAAAQCyBAAAAQDNBgAAAQBWBgAAAQBWBgAAAQDzAgkA9gQBABEA9gQGABkA9gQKACkA
+9gQQADEA9gQQADkA9gQQAEEA9gQQAEkA9gQQAFEA9gQQAFkA9gQQAGEA9gQQAGkA9gQGAJkA9gQG
+ALkA9gQVAMkA9gQGAIkA3AIGAIkA5wIGAIkAWAAbANEAIwQgAHEA9gQlAHEAsgQvAHEA0gUzAHkA
+GgA3AHEAggM8AHEAkQNBAHEAiQMBANkA9gQQAHEAyQZHAHEAGgZHAIkA9gQGAOEAAAZLAIkA5gVS
+AJEA9gQGAPEApwBYAPEA0QZfAKEA9gRlAMEA9gQGAC4ACwDqAC4AEwDzAC4AGwASAS4AIwAbAS4A
+KwBEAS4AMwBEAS4AOwBEAS4AQwAbAS4ASwBKAS4AUwBEAS4AWwBhAUMAYwCrAakAcwASAckAcwAS
+AeEAewCrAeMAawCrAQMAAQAHAAUACAAHAAAAiwDPAAAAXAPTAAAAJgTXAAAAcQPTAAAAvQTbAAAA
+CQHgAAAAKgblAAIABgADAAIABwAFAAEACAAHAAEACQAJAAIAEwALAAIAFAANAAEAFQANAAIAFgAP
+AASAAAABAAAAAAAAAAAAAAAAACMAAAAEAAAAAAAAAAAAAABtAG4AAAAAABEAAAAAAAAAAAAAAHYA
+YAYAAAAAEQAAAAAAAAAAAAAAdgB9BgAAAAAEAAAAAAAAAAAAAABtAJoDAAAAABEAAAAAAAAAAAAA
+AHYAbAQAAAAAAAAAAAEAAABHBQAAAAAAAABJRFRTQ29tcG9uZW50TWV0YURhdGExMDAAR2V0SW50
+MzIAU0NfNWE5MDliNzczYTE2NDU3NWJiMzFlNDhlYjZiZDk3MDkAPE1vZHVsZT4ASW5wdXRJRABn
+ZXRfQ29tcG9uZW50TWV0YURhdGEAbXNjb3JsaWIAZGVmYXVsdEluc3RhbmNlAGdldF9FcnJvckNv
+ZGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUASW5wdXROYW1lAE1pY3Jvc29m
+dC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVz
+b3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAEVkaXRvckJyb3dzYWJsZVN0YXRl
+AENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUA
+RGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRs
+ZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRy
+aWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25B
+dHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RB
+dHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJU1NjcmlwdENvbXBvbmVudEVu
+dHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRp
+YmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4ZWN1dGUAdmFsdWUAU3lzdGVtLlJ1bnRp
+bWUuVmVyc2lvbmluZwBTdHJpbmcAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFNDXzVhOTA5Yjc3M2Ex
+NjQ1NzViYjMxZTQ4ZWI2YmQ5NzA5LmRsbABnZXRfRXJyb3JDb2RlX0lzTnVsbABzZXRfRXJyb3JE
+ZXNjcmlwdGlvbl9Jc051bGwAU2V0TnVsbABzZXRfSXRlbQBTeXN0ZW0AcmVzb3VyY2VNYW4AU2Ny
+aXB0TWFpbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0u
+UmVmbGVjdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAHNldF9FcnJvckRlc2NyaXB0aW9u
+AEdldEVycm9yRGVzY3JpcHRpb24AU3RyaW5nQ29tcGFyaXNvbgBDdWx0dXJlSW5mbwBPdXRwdXRO
+YW1lTWFwAE91dHB1dE1hcABNaWNyb3NvZnQuU3FsU2VydmVyLkRUU1BpcGVsaW5lV3JhcABJbnB1
+dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIA
+TWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUuV3JhcHBlcgAuY3RvcgAuY2N0b3IAU3lz
+dGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJl
+c291cmNlcwBTQ181YTkwOWI3NzNhMTY0NTc1YmIzMWU0OGViNmJkOTcwOS5Qcm9wZXJ0aWVzLlJl
+c291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfNWE5MDliNzczYTE2NDU3NWJiMzFl
+NDhlYjZiZDk3MDkuUHJvcGVydGllcwBWYXJpYWJsZXMAQnVmZmVyQ29sdW1uSW5kZXhlcwBHZXRD
+b2x1bW5JbmRleGVzAFNldHRpbmdzAEVxdWFscwBDb25uZWN0aW9ucwBPYmplY3QARW5kT2ZSb3dz
+ZXQAZ2V0X0RlZmF1bHQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9u
+ZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBl
+bGluZUhvc3QASW5wdXQwX1Byb2Nlc3NJbnB1dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93AE5leHRS
+b3cAZ2V0X0Fzc2VtYmx5AAAAAICbSQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEA
+bgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAg
+AGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEA
+ZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBfADUAYQA5ADAAOQBiADcANwAzAGEAMQA2ADQANQA3
+ADUAYgBiADMAMQBlADQAOABlAGIANgBiAGQAOQA3ADAAOQAuAFAAcgBvAHAAZQByAHQAaQBlAHMA
+LgBSAGUAcwBvAHUAcgBjAGUAcwAAkRRUME4Lx0a/bbG15tGH6gAEIAEBCAMgAAEFIAEBEREEIAEB
+DgUgAQERWQQgABJpBCABDggJIAMBEj0dCBJBAwYSPQMGHQgEIAEICAQgAQIIBSACAQgcAyAAAgYg
+AgIOEXUFIAEdCAgGAAESeRF9BSAAEoCBByACAQ4SgIEIt3pcVhk04IkIiYRdzYCAzJEDBhIUAwYS
+GAMGEkUDBhJRAwYSVQMGEiAFIAEBEgwDIAAIBCABAQIJIAQBCA4SPRJBBSABARJFBAAAElEEAAAS
+VQUAAQESVQQAABIgAwAAAQMoAAgDKAACAygADgQIABJRBAgAElUECAASIAgBAAgAAAAAAB4BAAEA
+VAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfNWE5MDliNzczYTE2NDU3
+NWJiMzFlNDhlYjZiZDk3MDkAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMQAASQEAGi5ORVRG
+cmFtZXdvcmssVmVyc2lvbj12NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1l
+d29yayA0LjcEAQAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJl
+YWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNL
+ZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNl
+U2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAABMMgAAAAAAAAAAAABmMgAAACAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAWDIAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQ
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
+SAAAAFhAAADsAwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
+AAAAvQTv/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
+AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
+AAAAAAAAALAETAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAA
+MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
+AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
+AABTAEMAXwA1AGEAOQAwADkAYgA3ADcAMwBhADEANgA0ADUANwA1AGIAYgAzADEAZQA0ADgAZQBi
+ADYAYgBkADkANwAwADkAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
+MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADUAYQA5ADAAOQBi
+ADcANwAzAGEAMQA2ADQANQA3ADUAYgBiADMAMQBlADQAOABlAGIANgBiAGQAOQA3ADAAOQAuAGQA
+bABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBo
+AHQAIABAACAAIAAyADAAMgAxAAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMA
+AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8ANQBh
+ADkAMAA5AGIANwA3ADMAYQAxADYANAA1ADcANQBiAGIAMwAxAGUANAA4AGUAYgA2AGIAZAA5ADcA
+MAA5AC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADUAYQA5
+ADAAOQBiADcANwAzAGEAMQA2ADQANQA3ADUAYgBiADMAMQBlADQAOABlAGIANgBiAGQAOQA3ADAA
+OQAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4
+AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAeDIAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_5a909b773a164575bb31e48eb6bd9709</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">06</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Import Sales Customer_IL\Get Error Description.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Get Error Description.Inputs[Input 0].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      lineageId="Package\Import Sales Customer_IL\Insert Customer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Sales Customer_IL\Get Error Description.Outputs[Output 0]"
+                  name="Output 0"
+                  synchronousInputId="Package\Import Sales Customer_IL\Get Error Description.Inputs[Input 0]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Get Error Description.Outputs[Output 0].Columns[ErrorDescription]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Import Sales Customer_IL\Get Error Description.Outputs[Output 0].Columns[ErrorDescription]"
+                      name="ErrorDescription" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Sales Customer_IL\Insert Customer"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Insert Customer"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[S2_Customer]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        S1_Customer.Customer_ID, S1_Customer.Customer_Name, S1_Customer.Customer_Category_ID, S1_Customer.Customer_Buying_Group_Name, S1_Customer.Customer_Credit_Limit, 
+                         S1_Customer.Customer_Account_Opened_Date, S1_Customer.IBPT_ID, V_IB_Latest.IB_Year, V_IB_Latest.IB_Month
+FROM            S1_Customer INNER JOIN
+                         Import_Batch_Process_Task ON S1_Customer.IBPT_ID = Import_Batch_Process_Task.IBPT_ID INNER JOIN
+                         Import_Batch_Process ON Import_Batch_Process_Task.IBP_ID = Import_Batch_Process.IBP_ID INNER JOIN
+                         V_IB_Latest ON Import_Batch_Process.IB_ID = V_IB_Latest.Latest_IB_ID
+WHERE           V_IB_Latest.IB_Year =? AND V_IB_Latest.IB_Month=?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Sales Customer_IL\Insert Customer.Connections[OleDbConnection]"
+                  connectionManagerID="{D7F382B3-657D-4F44-B3FD-2F1D3FEFE092}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Stage2]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].Columns[Customer_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="Customer_Name"
+                      externalMetadataColumnId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Customer_Name]" />
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].Columns[Customer_Category_ID]"
+                      cachedDataType="i4"
+                      cachedName="Customer_Category_ID"
+                      externalMetadataColumnId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Category_ID]"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Customer_Category_ID]" />
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].Columns[Customer_Account_Opened_Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Customer_Account_Opened_Date"
+                      externalMetadataColumnId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Account_Opened_Date]"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Customer_Account_Opened_Date]" />
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].Columns[Invoice_Customer_ID]"
+                      cachedDataType="i4"
+                      cachedName="Invoice_Customer_ID"
+                      externalMetadataColumnId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      lineageId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Output].Columns[Invoice_Customer_ID]" />
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].Columns[Customer_Buying_Group]"
+                      cachedDataType="wstr"
+                      cachedLength="16"
+                      cachedName="Customer_Buying_Group"
+                      externalMetadataColumnId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Buying_Group_Name]"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Customer_Buying_Group]" />
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].Columns[IBPT_ID]"
+                      cachedDataType="i4"
+                      cachedName="IBPT_ID"
+                      externalMetadataColumnId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].ExternalColumns[IBPT_ID]"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[IBPT_ID]" />
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].Columns[Credit limit]"
+                      cachedDataType="i4"
+                      cachedName="Credit limit"
+                      externalMetadataColumnId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Credit_Limit]"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Credit limit]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].ExternalColumns[IBPT_ID]"
+                      dataType="i4"
+                      name="IBPT_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      dataType="i4"
+                      name="Customer_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Customer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Category_ID]"
+                      dataType="i4"
+                      name="Customer_Category_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Buying_Group_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Customer_Buying_Group_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Credit_Limit]"
+                      dataType="numeric"
+                      name="Customer_Credit_Limit"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Account_Opened_Date]"
+                      dataType="wstr"
+                      length="10"
+                      name="Customer_Account_Opened_Date" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Sales Customer_IL\Insert Customer.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Sales Customer_IL\Insert Customer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Insert Customer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Sales Customer_IL\Insert Customer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Sales Customer_IL\Lookup Customer"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup Customer"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[S2_Customer]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[S2_Customer]) [refTable]
+where [refTable].[Customer_ID] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Customer_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Customer_Name" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Customer_Category_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Customer_Buying_Group_Name" dataType="DT_WSTR" length="50" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Customer_Credit_Limit" dataType="DT_NUMERIC" length="0" precision="10" scale="2" codePage="0"/&gt;&lt;referenceColumn name="Customer_Account_Opened_Date" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IBPT_ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Output].Columns[Invoice_Customer_ID]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Sales Customer_IL\Lookup Customer.Connections[OleDbConnection]"
+                  connectionManagerID="{D7F382B3-657D-4F44-B3FD-2F1D3FEFE092}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Stage2]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import Sales Customer_IL\Lookup Customer.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Lookup Customer.Inputs[Lookup Input].Columns[Invoice_Customer_ID]"
+                      cachedDataType="i4"
+                      cachedName="Invoice_Customer_ID"
+                      lineageId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Output].Columns[Invoice_Customer_ID]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">Customer_ID</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Sales Customer_IL\Lookup Customer.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Import Sales Customer_IL\Lookup Customer.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import Sales Customer_IL\Lookup Customer.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Import Sales Customer_IL\Lookup Customer.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import Sales Customer_IL\Lookup Customer.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Import Sales Customer_IL\Lookup Customer.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Lookup Customer.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Sales Customer_IL\Lookup Customer.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Lookup Customer.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Sales Customer_IL\Lookup Customer.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Sales Customer_IL\Read S1 Invoice Line"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Read S1 Invoice Line"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[S1_V1_Customer]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        S1_Invoice_Line.Invoice_Customer_ID
+FROM            S1_Invoice_Line INNER JOIN
+                         Import_Batch_Process_Task ON S1_Invoice_Line.IBPT_ID = Import_Batch_Process_Task.IBPT_ID INNER JOIN
+                         Import_Batch_Process ON Import_Batch_Process_Task.IBP_ID = Import_Batch_Process.IBP_ID INNER JOIN
+                         V_IB_Latest ON Import_Batch_Process.IB_ID = V_IB_Latest.Latest_IB_ID
+WHERE        (V_IB_Latest.IB_Year = ?) AND (V_IB_Latest.IB_Month = ?)
+GROUP BY S1_Invoice_Line.Invoice_Customer_ID</property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping">"Parameter0:Input",{79E28ECC-3A20-4B11-9D33-37CAFFDED240};"Parameter1:Input",{B8996366-02DD-4AF0-8CCD-C0D6DB236840};</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Connections[OleDbConnection]"
+                  connectionManagerID="{AE22F4E9-E8F7-4FD3-AAF0-0E9A986F62FB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Stage1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Output].Columns[Invoice_Customer_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Output].ExternalColumns[Invoice_Customer_ID]"
+                      lineageId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Output].Columns[Invoice_Customer_ID]"
+                      name="Invoice_Customer_ID"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Output].ExternalColumns[Invoice_Customer_ID]"
+                      dataType="i4"
+                      name="Invoice_Customer_ID" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Error Output].Columns[Invoice_Customer_ID]"
+                      dataType="i4"
+                      lineageId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Error Output].Columns[Invoice_Customer_ID]"
+                      name="Invoice_Customer_ID" />
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Sales Customer_IL\Row Count"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Row Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::IBPT_Records_In</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Import Sales Customer_IL\Row Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Sales Customer_IL\Row Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Import Sales Customer_IL\Row Count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Sales Customer_IL\Row Count Errors"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Row Count Errors">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::IBPT_Records_Failed</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Import Sales Customer_IL\Row Count Errors.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Sales Customer_IL\Row Count Errors.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Import Sales Customer_IL\Row Count Errors.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Sales Customer_IL\Write errors to file"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="7177"
+              name="Write errors to file"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Sales Customer_IL\Write errors to file.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Errors file]"
+                  connectionManagerRefId="Package.ConnectionManagers[Errors file]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].Columns[Customer_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="8"
+                      cachedName="Customer_Name"
+                      externalMetadataColumnId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[Customer_Name]"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Customer_Name]" />
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].Columns[Customer_Category_ID]"
+                      cachedDataType="i4"
+                      cachedName="Customer_Category_ID"
+                      externalMetadataColumnId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[Customer_Category_ID]"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Customer_Category_ID]" />
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].Columns[Customer_Account_Opened_Date]"
+                      cachedDataType="dbDate"
+                      cachedName="Customer_Account_Opened_Date"
+                      externalMetadataColumnId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[Customer_Account_Opened_Date]"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[Customer_Account_Opened_Date]" />
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].Columns[IBPT_ID]"
+                      cachedDataType="i4"
+                      cachedName="IBPT_ID"
+                      externalMetadataColumnId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[IBPT_ID]"
+                      lineageId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output].Columns[IBPT_ID]" />
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Import Sales Customer_IL\Insert Customer.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Import Sales Customer_IL\Insert Customer.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]" />
+                    <inputColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].Columns[ErrorDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ErrorDescription"
+                      externalMetadataColumnId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[ErrorDescription]"
+                      lineageId="Package\Import Sales Customer_IL\Get Error Description.Outputs[Output 0].Columns[ErrorDescription]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[Customer_ID]"
+                      dataType="i4"
+                      name="Customer_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[Customer_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Customer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[Customer_Category_ID]"
+                      dataType="i4"
+                      name="Customer_Category_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[Customer_Buying_Group_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Customer_Buying_Group_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[Customer_Credit_Limit]"
+                      dataType="numeric"
+                      name="Customer_Credit_Limit"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[Customer_Account_Opened_Date]"
+                      dataType="wstr"
+                      length="10"
+                      name="Customer_Account_Opened_Date" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[IBPT_ID]"
+                      dataType="i4"
+                      name="IBPT_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input].ExternalColumns[ErrorDescription]"
+                      dataType="wstr"
+                      length="500"
+                      name="ErrorDescription" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import Sales Customer_IL.Paths[Derived Column Output]"
+              endId="Package\Import Sales Customer_IL\Lookup Customer.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Import Sales Customer_IL\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Import Sales Customer_IL.Paths[Lookup No Match Output]"
+              endId="Package\Import Sales Customer_IL\Row Count.Inputs[Row Count Input 1]"
+              name="Lookup No Match Output"
+              startId="Package\Import Sales Customer_IL\Lookup Customer.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Import Sales Customer_IL.Paths[OLE DB Destination Error Output]"
+              endId="Package\Import Sales Customer_IL\Get Error Description.Inputs[Input 0]"
+              name="OLE DB Destination Error Output"
+              startId="Package\Import Sales Customer_IL\Insert Customer.Outputs[OLE DB Destination Error Output]" />
+            <path
+              refId="Package\Import Sales Customer_IL.Paths[OLE DB Source Output]"
+              endId="Package\Import Sales Customer_IL\Derived Column.Inputs[Derived Column Input]"
+              name="OLE DB Source Output"
+              startId="Package\Import Sales Customer_IL\Read S1 Invoice Line.Outputs[OLE DB Source Output]" />
+            <path
+              refId="Package\Import Sales Customer_IL.Paths[Output 0]"
+              endId="Package\Import Sales Customer_IL\Row Count Errors.Inputs[Row Count Input 1]"
+              name="Output 0"
+              startId="Package\Import Sales Customer_IL\Get Error Description.Outputs[Output 0]" />
+            <path
+              refId="Package\Import Sales Customer_IL.Paths[Row Count Output 1]"
+              endId="Package\Import Sales Customer_IL\Write errors to file.Inputs[Flat File Destination Input]"
+              name="Row Count Output 1"
+              startId="Package\Import Sales Customer_IL\Row Count Errors.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\Import Sales Customer_IL.Paths[Row Count Output 11]"
+              endId="Package\Import Sales Customer_IL\Insert Customer.Inputs[OLE DB Destination Input]"
+              name="Row Count Output 1"
+              startId="Package\Import Sales Customer_IL\Row Count.Outputs[Row Count Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Import_Batch_Process_Task Failure"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{15D158AB-8C3C-400F-BFC5-C2B0636D4184}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Import_Batch_Process_Task Failure"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{81A86D9D-04A8-4253-8162-2AB18189596A}"
+          SQLTask:SqlStatementSource="Update Import_Batch_Process_Task set &#xA;    IBPT_End = @IBPT_End,&#xA;    IBPT_Status = 'Failed'&#xA; Where IBPT_ID = @IBPT_ID" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="@IBPT_End"
+            SQLTask:DtsVariableName="User::Current_DateTime"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="6"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBPT_ID"
+            SQLTask:DtsVariableName="User::IBPT_ID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Import_Batch_Process_Task Success"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{2db07e52-25df-41a9-8f03-014e5b24881b}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Import_Batch_Process_Task Success"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{81A86D9D-04A8-4253-8162-2AB18189596A}"
+          SQLTask:SqlStatementSource="Update Import_Batch_Process_Task set &#xA;    IBPT_End = @IBPT_End,&#xA;    IBPT_Status = 'Completed',&#xA;    IBPT_Records_In =  @IBPT_Records_In,&#xA;    IBPT_Records_Failed = @IBPT_Records_Failed,&#xA;    IBPT_Records_Out = @IBPT_Records_Out&#xA; Where IBPT_ID = @IBPT_ID" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="@IBPT_End"
+            SQLTask:DtsVariableName="User::Current_DateTime"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="6"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBPT_Records_In"
+            SQLTask:DtsVariableName="User::IBPT_Records_In"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBPT_Records_Failed"
+            SQLTask:DtsVariableName="User::IBPT_Records_Failed"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBPT_Records_Out"
+            SQLTask:DtsVariableName="User::IBPT_Records_Out"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBPT_ID"
+            SQLTask:DtsVariableName="User::IBPT_ID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{2CD54987-9B05-44F6-8228-4AA4D5EAD585}"
+      DTS:From="Package\Create Import_Batch_Process_Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Import Sales Customer_IL" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{9DC6D0F0-A2D5-4656-A5AE-9BE2723B156D}"
+      DTS:From="Package\Import Sales Customer_IL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Update Import_Batch_Process_Task Success" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{D87AEAC6-A0E8-4E84-94E7-00FABE141F0F}"
+      DTS:From="Package\Import Sales Customer_IL"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Update Import_Batch_Process_Task Failure"
+      DTS:Value="1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="256,42"
+          Id="Package\Create Import_Batch_Process_Task"
+          TopLeft="198.428574620461,15.8901950745984" />
+        <NodeLayout
+          Size="202,42"
+          Id="Package\Import Sales Customer_IL"
+          TopLeft="234.428571410325,87.4117646985093" />
+        <NodeLayout
+          Size="284,42"
+          Id="Package\Update Import_Batch_Process_Task Failure"
+          TopLeft="393,172" />
+        <NodeLayout
+          Size="289,42"
+          Id="Package\Update Import_Batch_Process_Task Success"
+          TopLeft="42,172" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="326.428574620461,57.8901950745984">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.99999678986399,29.5215696239109"
+              Start="0,0"
+              End="8.99999678986399,22.0215696239109">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.7607848119554" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.7607848119554"
+                    Point2="0,14.7607848119554"
+                    Point3="4,14.7607848119554" />
+                  <mssgle:LineSegment
+                    End="4.99999678986399,14.7607848119554" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.99999678986399,14.7607848119554"
+                    Point2="8.99999678986399,14.7607848119554"
+                    Point3="8.99999678986399,18.7607848119554" />
+                  <mssgle:LineSegment
+                    End="8.99999678986399,22.0215696239109" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="303.095238076992,129.411764698509">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-116.595238076992,42.5882353014907"
+              Start="0,0"
+              End="-116.595238076992,35.0882353014907">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.236103088619" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.236103088619"
+                    Point2="0,17.236103088619"
+                    Point3="-4,17.236103088619" />
+                  <mssgle:LineSegment
+                    End="-112.595238076992,17.236103088619" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-112.595238076992,17.236103088619"
+                    Point2="-116.595238076992,17.236103088619"
+                    Point3="-116.595238076992,21.236103088619" />
+                  <mssgle:LineSegment
+                    End="-116.595238076992,35.0882353014907" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="367.761904743658,129.411764698509">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="167.238095256342,42.5882353014907"
+              Start="0,0"
+              End="167.238095256342,35.0882353014907">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.236103088619" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.236103088619"
+                    Point2="0,17.236103088619"
+                    Point3="4,17.236103088619" />
+                  <mssgle:LineSegment
+                    End="163.238095256342,17.236103088619" />
+                  <mssgle:CubicBezierSegment
+                    Point1="163.238095256342,17.236103088619"
+                    Point2="167.238095256342,17.236103088619"
+                    Point3="167.238095256342,21.236103088619" />
+                  <mssgle:LineSegment
+                    End="167.238095256342,35.0882353014907" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="68.377699971921,22.236103088619,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Import Sales Customer_IL">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Import Sales Customer_IL\Read S1 Invoice Line"
+          TopLeft="324,0" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\Import Sales Customer_IL\Row Count Errors"
+          TopLeft="333.142857126131,556.52941179755" />
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Import Sales Customer_IL\Row Count"
+          TopLeft="350,281" />
+        <NodeLayout
+          Size="178,42"
+          Id="Package\Import Sales Customer_IL\Get Error Description"
+          TopLeft="328.428571420969,478.588235324281" />
+        <NodeLayout
+          Size="155,42"
+          Id="Package\Import Sales Customer_IL\Insert Customer"
+          TopLeft="343.571429228296,397.505882138447" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Import Sales Customer_IL\Lookup Customer"
+          TopLeft="335,180" />
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Import Sales Customer_IL\Derived Column"
+          TopLeft="347.142857136775,96.705882411927" />
+        <NodeLayout
+          Size="165,42"
+          Id="Package\Import Sales Customer_IL\Write errors to file"
+          TopLeft="336,639" />
+        <EdgeLayout
+          Id="Package\Import Sales Customer_IL.Paths[Row Count Output 11]"
+          TopLeft="418.035714614148,323">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,74.505882138447"
+              Start="0,0"
+              End="0,67.005882138447">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,67.005882138447" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Sales Customer_IL.Paths[Row Count Output 1]"
+          TopLeft="416.321428563066,598.52941179755">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.47058820245"
+              Start="0,0"
+              End="0,32.97058820245">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.97058820245" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Sales Customer_IL.Paths[Output 0]"
+          TopLeft="415.78571427355,520.588235324281">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,35.941176473269"
+              Start="0,0"
+              End="0,28.441176473269">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.441176473269" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Sales Customer_IL.Paths[OLE DB Source Output]"
+          TopLeft="413,42">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11.142857136775,54.705882411927"
+              Start="0,0"
+              End="11.142857136775,47.205882411927">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,23.3529412059635" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,23.3529412059635"
+                    Point2="0,27.3529412059635"
+                    Point3="4,27.3529412059635" />
+                  <mssgle:LineSegment
+                    End="7.14285713677498,27.3529412059635" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.14285713677498,27.3529412059635"
+                    Point2="11.142857136775,27.3529412059635"
+                    Point3="11.142857136775,31.3529412059635" />
+                  <mssgle:LineSegment
+                    End="11.142857136775,47.205882411927" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Sales Customer_IL.Paths[OLE DB Destination Error Output]"
+          TopLeft="419.250000324632,439.505882138447">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,39.082353185834"
+              Start="0,0"
+              End="0,31.582353185834">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.582353185834" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-73.20890625,10.074379717917,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Sales Customer_IL.Paths[Lookup No Match Output]"
+          TopLeft="415.25,222">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59"
+              Start="0,0"
+              End="0,51.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-55.80638671875,19.9453125,111.6127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Sales Customer_IL.Paths[Derived Column Output]"
+          TopLeft="424.142857136775,138.705882411927">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-8.64285713677498,41.294117588073"
+              Start="0,0"
+              End="-8.64285713677498,33.794117588073">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.6470587940365" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.6470587940365"
+                    Point2="0,20.6470587940365"
+                    Point3="-4,20.6470587940365" />
+                  <mssgle:LineSegment
+                    End="-4.64285713677498,20.6470587940365" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-4.64285713677498,20.6470587940365"
+                    Point2="-8.64285713677498,20.6470587940365"
+                    Point3="-8.64285713677498,24.6470587940365" />
+                  <mssgle:LineSegment
+                    End="-8.64285713677498,33.794117588073" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Sales Customer_IL\Read S1 Invoice Line">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">View</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Sales Customer_IL\Insert Customer">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Sales Customer_IL\Lookup Customer">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[S2_Customer]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

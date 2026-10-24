@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="AtomicDW1 Net"
+  DTS:DTSID="{34A8D277-B251-45A5-A659-9380287D06DE}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=DESKTOP-78QVLSV;Initial Catalog=AtomicDW;Integrated Security=True;Application Name=SSIS-{34A8D277-B251-45A5-A659-9380287D06DE}THAPELO_SQLEXPRESS.AtomicDW1;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

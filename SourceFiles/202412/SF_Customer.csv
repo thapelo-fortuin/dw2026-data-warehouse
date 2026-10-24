@@ -1,0 +1,803 @@
+CustomerID,CustomerName,CustomerCategoryID,BuyingGroupName,CreditLimit,AccountOpenedDate
+1,Tailspin Toys (Head Office),3,Tailspin Toys,,2013/01/01
+2,"Tailspin Toys (Sylvanite, MT)",3,Tailspin Toys,,2013/01/01
+3,"Tailspin Toys (Peeples Valley, AZ)",3,Tailspin Toys,,2013/01/01
+4,"Tailspin Toys (Medicine Lodge, KS)",3,Tailspin Toys,,2013/01/01
+5,"Tailspin Toys (Gasport, NY)",3,Tailspin Toys,,2013/01/01
+6,"Tailspin Toys (Jessie, ND)",3,Tailspin Toys,,2013/01/01
+7,"Tailspin Toys (Frankewing, TN)",3,Tailspin Toys,,2013/01/01
+8,"Tailspin Toys (Bow Mar, CO)",3,Tailspin Toys,,2013/01/01
+9,"Tailspin Toys (Netcong, NJ)",3,Tailspin Toys,,2013/01/01
+10,"Tailspin Toys (Wimbledon, ND)",3,Tailspin Toys,,2013/01/01
+11,"Tailspin Toys (Devault, PA)",3,Tailspin Toys,,2013/01/01
+12,"Tailspin Toys (Biscay, MN)",3,Tailspin Toys,,2013/01/01
+13,"Tailspin Toys (Stonefort, IL)",3,Tailspin Toys,,2013/01/01
+14,"Tailspin Toys (Long Meadow, MD)",3,Tailspin Toys,,2013/01/01
+15,"Tailspin Toys (Batson, TX)",3,Tailspin Toys,,2013/01/01
+16,"Tailspin Toys (Coney Island, MO)",3,Tailspin Toys,,2013/01/01
+17,"Tailspin Toys (East Fultonham, OH)",3,Tailspin Toys,,2013/01/01
+18,"Tailspin Toys (Goffstown, NH)",3,Tailspin Toys,,2013/01/01
+19,"Tailspin Toys (Lemeta, AK)",3,Tailspin Toys,,2013/01/01
+20,"Tailspin Toys (College Place, WA)",3,Tailspin Toys,,2013/01/01
+21,"Tailspin Toys (Tresckow, PA)",3,Tailspin Toys,,2013/01/01
+22,"Tailspin Toys (Ward Ridge, FL)",3,Tailspin Toys,,2013/01/01
+23,"Tailspin Toys (Ikatan, AK)",3,Tailspin Toys,,2013/01/01
+24,"Tailspin Toys (Dundarrach, NC)",3,Tailspin Toys,,2013/01/01
+25,"Tailspin Toys (Avenal, CA)",3,Tailspin Toys,,2013/01/01
+26,"Tailspin Toys (Hedrick, IA)",3,Tailspin Toys,,2013/01/01
+27,"Tailspin Toys (Bowlus, MN)",3,Tailspin Toys,,2013/01/01
+28,"Tailspin Toys (North Ridge, NY)",3,Tailspin Toys,,2013/01/01
+29,"Tailspin Toys (Eulaton, AL)",3,Tailspin Toys,,2013/01/01
+30,"Tailspin Toys (Koontzville, WA)",3,Tailspin Toys,,2013/01/01
+31,"Tailspin Toys (Lake Stevens, WA)",3,Tailspin Toys,,2013/01/01
+32,"Tailspin Toys (Maypearl, TX)",3,Tailspin Toys,,2013/01/01
+33,"Tailspin Toys (Boyden Arbor, SC)",3,Tailspin Toys,,2013/01/01
+34,"Tailspin Toys (Dallardsville, TX)",3,Tailspin Toys,,2013/01/01
+35,"Tailspin Toys (Slanesville, WV)",3,Tailspin Toys,,2013/01/01
+36,"Tailspin Toys (Ekron, KY)",3,Tailspin Toys,,2013/01/01
+37,"Tailspin Toys (Kerby, OR)",3,Tailspin Toys,,2013/01/01
+38,"Tailspin Toys (Airport Drive, MO)",3,Tailspin Toys,,2013/01/01
+39,"Tailspin Toys (Diablock, KY)",3,Tailspin Toys,,2013/01/01
+40,"Tailspin Toys (Impact, TX)",3,Tailspin Toys,,2013/01/01
+41,"Tailspin Toys (Olivette, MO)",3,Tailspin Toys,,2013/01/01
+42,"Tailspin Toys (Arietta, NY)",3,Tailspin Toys,,2013/01/01
+43,"Tailspin Toys (Upper Preston, WA)",3,Tailspin Toys,,2013/01/01
+44,"Tailspin Toys (Amanda Park, WA)",3,Tailspin Toys,,2013/01/01
+45,"Tailspin Toys (Severna Park, MD)",3,Tailspin Toys,,2013/01/01
+46,"Tailspin Toys (Jemison, AL)",3,Tailspin Toys,,2013/01/01
+47,"Tailspin Toys (Lake Hughes, CA)",3,Tailspin Toys,,2013/01/01
+48,"Tailspin Toys (Trentwood, WA)",3,Tailspin Toys,,2013/01/01
+49,"Tailspin Toys (Muir, MI)",3,Tailspin Toys,,2013/01/01
+50,"Tailspin Toys (Hambleton, WV)",3,Tailspin Toys,,2013/01/01
+51,"Tailspin Toys (Imlaystown, NJ)",3,Tailspin Toys,,2013/01/01
+52,"Tailspin Toys (Idria, CA)",3,Tailspin Toys,,2013/01/01
+53,"Tailspin Toys (Nanafalia, AL)",3,Tailspin Toys,,2013/01/01
+54,"Tailspin Toys (Railroad, PA)",3,Tailspin Toys,,2013/01/01
+55,"Tailspin Toys (Gum Branch, GA)",3,Tailspin Toys,,2013/01/01
+56,"Tailspin Toys (Royal City, WA)",3,Tailspin Toys,,2013/01/01
+57,"Tailspin Toys (Lakemore, OH)",3,Tailspin Toys,,2013/01/01
+58,"Tailspin Toys (Mappsburg, VA)",3,Tailspin Toys,,2013/01/01
+59,"Tailspin Toys (Edgartown, MA)",3,Tailspin Toys,,2013/01/01
+60,"Tailspin Toys (East Dailey, WV)",3,Tailspin Toys,,2013/01/01
+61,"Tailspin Toys (Fairfield Glade, TN)",3,Tailspin Toys,,2013/01/01
+62,"Tailspin Toys (Great Neck Estates, NY)",3,Tailspin Toys,,2013/01/01
+63,"Tailspin Toys (Stallion Springs, CA)",3,Tailspin Toys,,2013/01/01
+64,"Tailspin Toys (Hodgdon, ME)",3,Tailspin Toys,,2013/01/01
+65,"Tailspin Toys (North Cowden, TX)",3,Tailspin Toys,,2013/01/01
+66,"Tailspin Toys (Madaket, MA)",3,Tailspin Toys,,2013/01/01
+67,"Tailspin Toys (Sentinel Butte, ND)",3,Tailspin Toys,,2013/01/01
+68,"Tailspin Toys (Gardere, LA)",3,Tailspin Toys,,2013/01/01
+69,"Tailspin Toys (Lytle Creek, CA)",3,Tailspin Toys,,2013/01/01
+70,"Tailspin Toys (New Baden, IL)",3,Tailspin Toys,,2013/01/01
+71,"Tailspin Toys (Good Hart, MI)",3,Tailspin Toys,,2013/01/01
+72,"Tailspin Toys (Cortaro, AZ)",3,Tailspin Toys,,2013/01/01
+73,"Tailspin Toys (Cokato, MN)",3,Tailspin Toys,,2013/01/01
+74,"Tailspin Toys (Indios, PR)",3,Tailspin Toys,,2013/01/01
+75,"Tailspin Toys (Windsor Locks, CT)",3,Tailspin Toys,,2013/01/01
+76,"Tailspin Toys (Yewed, OK)",3,Tailspin Toys,,2013/01/01
+77,"Tailspin Toys (Hahira, GA)",3,Tailspin Toys,,2013/01/01
+78,"Tailspin Toys (Sekiu, WA)",3,Tailspin Toys,,2013/01/01
+79,"Tailspin Toys (Page City, KS)",3,Tailspin Toys,,2013/01/01
+80,"Tailspin Toys (Valdese, NC)",3,Tailspin Toys,,2013/01/01
+81,"Tailspin Toys (Big Moose, NY)",3,Tailspin Toys,,2013/01/01
+82,"Tailspin Toys (La Cueva, NM)",3,Tailspin Toys,,2013/01/01
+83,"Tailspin Toys (Absecon, NJ)",3,Tailspin Toys,,2013/01/01
+84,"Tailspin Toys (Aceitunas, PR)",3,Tailspin Toys,,2013/01/01
+85,"Tailspin Toys (Andrix, CO)",3,Tailspin Toys,,2013/01/01
+86,"Tailspin Toys (New Lexington, OH)",3,Tailspin Toys,,2013/01/01
+87,"Tailspin Toys (Sauquoit, NY)",3,Tailspin Toys,,2013/01/01
+88,"Tailspin Toys (Dracut, MA)",3,Tailspin Toys,,2013/01/01
+89,"Tailspin Toys (Victory Gardens, NJ)",3,Tailspin Toys,,2013/01/01
+90,"Tailspin Toys (Tolna, ND)",3,Tailspin Toys,,2013/01/01
+91,"Tailspin Toys (Alstead, NH)",3,Tailspin Toys,,2013/01/01
+92,"Tailspin Toys (Sans Souci, SC)",3,Tailspin Toys,,2013/01/01
+93,"Tailspin Toys (Clewiston, FL)",3,Tailspin Toys,,2013/01/01
+94,"Tailspin Toys (Cheyenne Wells, CO)",3,Tailspin Toys,,2013/01/01
+95,"Tailspin Toys (Lavon, TX)",3,Tailspin Toys,,2013/01/01
+96,"Tailspin Toys (South La Paloma, TX)",3,Tailspin Toys,,2013/01/01
+97,"Tailspin Toys (Manchester Center, VT)",3,Tailspin Toys,,2013/01/01
+98,"Tailspin Toys (El Centro, CA)",3,Tailspin Toys,,2013/01/01
+99,"Tailspin Toys (Guin, AL)",3,Tailspin Toys,,2013/01/01
+100,"Tailspin Toys (Tunnelhill, PA)",3,Tailspin Toys,,2013/01/01
+101,"Tailspin Toys (Cundiyo, NM)",3,Tailspin Toys,,2013/01/01
+102,"Tailspin Toys (Fieldbrook, CA)",3,Tailspin Toys,,2013/01/01
+103,"Tailspin Toys (Kalvesta, KS)",3,Tailspin Toys,,2013/01/01
+104,"Tailspin Toys (Wallagrass, ME)",3,Tailspin Toys,,2013/01/01
+105,"Tailspin Toys (Tomnolen, MS)",3,Tailspin Toys,,2013/01/01
+106,"Tailspin Toys (Tumacacori, AZ)",3,Tailspin Toys,,2013/01/01
+107,"Tailspin Toys (Glen Avon, CA)",3,Tailspin Toys,,2013/01/01
+108,"Tailspin Toys (Bernie, MO)",3,Tailspin Toys,,2013/01/01
+109,"Tailspin Toys (South Laguna, CA)",3,Tailspin Toys,,2013/01/01
+110,"Tailspin Toys (North Crows Nest, IN)",3,Tailspin Toys,,2013/01/01
+111,"Tailspin Toys (Oriole Beach, FL)",3,Tailspin Toys,,2013/01/01
+112,"Tailspin Toys (Sallyards, KS)",3,Tailspin Toys,,2013/01/01
+113,"Tailspin Toys (Dahlia, NM)",3,Tailspin Toys,,2013/01/01
+114,"Tailspin Toys (Cherry Grove Beach, SC)",3,Tailspin Toys,,2013/01/01
+115,"Tailspin Toys (Bethania, NC)",3,Tailspin Toys,,2013/01/01
+116,"Tailspin Toys (Rafael CapÛ, PR)",3,Tailspin Toys,,2013/01/01
+117,"Tailspin Toys (Scofield, UT)",3,Tailspin Toys,,2013/01/01
+118,"Tailspin Toys (Vassalboro, ME)",3,Tailspin Toys,,2013/01/01
+119,"Tailspin Toys (Statenville, GA)",3,Tailspin Toys,,2013/01/01
+120,"Tailspin Toys (Bratenahl, OH)",3,Tailspin Toys,,2013/01/01
+121,"Tailspin Toys (Elrosa, MN)",3,Tailspin Toys,,2013/01/01
+122,"Tailspin Toys (McClave, CO)",3,Tailspin Toys,,2013/01/01
+123,"Tailspin Toys (Roe Park, NY)",3,Tailspin Toys,,2013/01/01
+124,"Tailspin Toys (Hanoverton, OH)",3,Tailspin Toys,,2013/01/01
+125,"Tailspin Toys (Annamoriah, WV)",3,Tailspin Toys,,2013/01/01
+126,"Tailspin Toys (Francis Mills, NJ)",3,Tailspin Toys,,2013/01/01
+127,"Tailspin Toys (Point Roberts, WA)",3,Tailspin Toys,,2013/01/01
+128,"Tailspin Toys (East Portal, CO)",3,Tailspin Toys,,2013/01/01
+129,"Tailspin Toys (Mineral Hills, MI)",3,Tailspin Toys,,2013/01/01
+130,"Tailspin Toys (Maple Shade, NJ)",3,Tailspin Toys,,2013/01/01
+131,"Tailspin Toys (Kwethluk, AK)",3,Tailspin Toys,,2013/01/01
+132,"Tailspin Toys (Minidoka, ID)",3,Tailspin Toys,,2013/01/01
+133,"Tailspin Toys (Lake Erie Beach, NY)",3,Tailspin Toys,,2013/01/01
+134,"Tailspin Toys (Tavares, FL)",3,Tailspin Toys,,2013/01/01
+135,"Tailspin Toys (Terre du Lac, MO)",3,Tailspin Toys,,2013/01/01
+136,"Tailspin Toys (Mount Montgomery, NV)",3,Tailspin Toys,,2013/01/01
+137,"Tailspin Toys (Carbonville, UT)",3,Tailspin Toys,,2013/01/01
+138,"Tailspin Toys (Navassa, NC)",3,Tailspin Toys,,2013/01/01
+139,"Tailspin Toys (Hardeeville, SC)",3,Tailspin Toys,,2013/01/01
+140,"Tailspin Toys (Furley, KS)",3,Tailspin Toys,,2013/01/01
+141,"Tailspin Toys (Arrow Rock, MO)",3,Tailspin Toys,,2013/01/01
+142,"Tailspin Toys (King Cove, AK)",3,Tailspin Toys,,2013/01/01
+143,"Tailspin Toys (Ashtabula, OH)",3,Tailspin Toys,,2013/01/01
+144,"Tailspin Toys (Larose, LA)",3,Tailspin Toys,,2013/01/01
+145,"Tailspin Toys (Manahawkin, NJ)",3,Tailspin Toys,,2013/01/01
+146,"Tailspin Toys (Belgreen, AL)",3,Tailspin Toys,,2013/01/01
+147,"Tailspin Toys (Fishtail, MT)",3,Tailspin Toys,,2013/01/01
+148,"Tailspin Toys (Baraboo, WI)",3,Tailspin Toys,,2013/01/01
+149,"Tailspin Toys (Inguadona, MN)",3,Tailspin Toys,,2013/01/01
+150,"Tailspin Toys (Corfu, NY)",3,Tailspin Toys,,2013/01/01
+151,"Tailspin Toys (Antares, AZ)",3,Tailspin Toys,,2013/01/01
+152,"Tailspin Toys (Sun River, MT)",3,Tailspin Toys,,2013/01/01
+153,"Tailspin Toys (Marcell, MN)",3,Tailspin Toys,,2013/01/01
+154,"Tailspin Toys (Eden Valley, MN)",3,Tailspin Toys,,2013/01/01
+155,"Tailspin Toys (Arbor Vitae, WI)",3,Tailspin Toys,,2013/01/01
+156,"Tailspin Toys (Hollywood Park, TX)",3,Tailspin Toys,,2013/01/01
+157,"Tailspin Toys (Saks, AL)",3,Tailspin Toys,,2013/01/01
+158,"Tailspin Toys (Donner, LA)",3,Tailspin Toys,,2013/01/01
+159,"Tailspin Toys (Saint Louis Park, MN)",3,Tailspin Toys,,2013/01/01
+160,"Tailspin Toys (Crary, ND)",3,Tailspin Toys,,2013/01/01
+161,"Tailspin Toys (Aspen Park, CO)",3,Tailspin Toys,,2013/01/01
+162,"Tailspin Toys (Glen Park, NY)",3,Tailspin Toys,,2013/01/01
+163,"Tailspin Toys (Panaca, NV)",3,Tailspin Toys,,2013/01/01
+164,"Tailspin Toys (Rothsville, PA)",3,Tailspin Toys,,2013/01/01
+165,"Tailspin Toys (Topstone, CT)",3,Tailspin Toys,,2013/01/01
+166,"Tailspin Toys (McCamey, TX)",3,Tailspin Toys,,2013/01/01
+167,"Tailspin Toys (Rockwall, TX)",3,Tailspin Toys,,2013/01/01
+168,"Tailspin Toys (Seagraves, TX)",3,Tailspin Toys,,2013/01/01
+169,"Tailspin Toys (Sinclair, WY)",3,Tailspin Toys,,2013/01/01
+170,"Tailspin Toys (Eastchester, NY)",3,Tailspin Toys,,2013/01/01
+171,"Tailspin Toys (Ortley Beach, NJ)",3,Tailspin Toys,,2013/01/01
+172,"Tailspin Toys (Madrone, NM)",3,Tailspin Toys,,2013/01/01
+173,"Tailspin Toys (Wappingers Falls, NY)",3,Tailspin Toys,,2013/01/01
+174,"Tailspin Toys (Astor Park, FL)",3,Tailspin Toys,,2013/01/01
+175,"Tailspin Toys (San Acacia, NM)",3,Tailspin Toys,,2013/01/01
+176,"Tailspin Toys (Malott, WA)",3,Tailspin Toys,,2013/01/01
+177,"Tailspin Toys (Orrtanna, PA)",3,Tailspin Toys,,2013/01/01
+178,"Tailspin Toys (Armstrong Creek, WI)",3,Tailspin Toys,,2013/01/01
+179,"Tailspin Toys (Hiteman, IA)",3,Tailspin Toys,,2013/01/01
+180,"Tailspin Toys (Caselton, NV)",3,Tailspin Toys,,2013/01/01
+181,"Tailspin Toys (Heilwood, PA)",3,Tailspin Toys,,2013/01/01
+182,"Tailspin Toys (Hayes Center, NE)",3,Tailspin Toys,,2013/01/01
+183,"Tailspin Toys (Tierra Verde, FL)",3,Tailspin Toys,,2013/01/01
+184,"Tailspin Toys (South Euclid, OH)",3,Tailspin Toys,,2013/01/01
+185,"Tailspin Toys (Vidrine, LA)",3,Tailspin Toys,,2013/01/01
+186,"Tailspin Toys (Placer, OR)",3,Tailspin Toys,,2013/01/01
+187,"Tailspin Toys (Brown City, MI)",3,Tailspin Toys,,2013/01/01
+188,"Tailspin Toys (Premont, TX)",3,Tailspin Toys,,2013/01/01
+189,"Tailspin Toys (Wilkes-Barre, PA)",3,Tailspin Toys,,2013/01/01
+190,"Tailspin Toys (Teutopolis, IL)",3,Tailspin Toys,,2013/01/01
+191,"Tailspin Toys (Orchard Hill, GA)",3,Tailspin Toys,,2013/01/01
+192,"Tailspin Toys (Optimo, NM)",3,Tailspin Toys,,2013/01/01
+193,"Tailspin Toys (Knifley, KY)",3,Tailspin Toys,,2013/01/01
+194,"Tailspin Toys (Naples Park, FL)",3,Tailspin Toys,,2013/01/01
+195,"Tailspin Toys (Lesslie, SC)",3,Tailspin Toys,,2013/01/01
+196,"Tailspin Toys (Howells, NE)",3,Tailspin Toys,,2013/01/01
+197,"Tailspin Toys (Magalia, CA)",3,Tailspin Toys,,2013/01/01
+198,"Tailspin Toys (Buell, MO)",3,Tailspin Toys,,2013/01/01
+199,"Tailspin Toys (Antonito, CO)",3,Tailspin Toys,,2013/01/01
+200,"Tailspin Toys (Tooele, UT)",3,Tailspin Toys,,2013/01/01
+201,"Tailspin Toys (Skyway, WA)",3,Tailspin Toys,,2013/01/01
+401,Wingtip Toys (Head Office),3,Wingtip Toys,,2013/01/01
+402,"Wingtip Toys (Black Lick, PA)",3,Wingtip Toys,,2013/01/01
+403,"Wingtip Toys (Queen Valley, AZ)",3,Wingtip Toys,,2013/01/01
+404,"Wingtip Toys (Penns Creek, PA)",3,Wingtip Toys,,2013/01/01
+405,"Wingtip Toys (Bourbonnais, IL)",3,Wingtip Toys,,2013/01/01
+406,"Wingtip Toys (Tuscaloosa, AL)",3,Wingtip Toys,,2013/01/01
+407,"Wingtip Toys (Mooringsport, LA)",3,Wingtip Toys,,2013/01/01
+408,"Wingtip Toys (Rockwall, TX)",3,Wingtip Toys,,2013/01/01
+409,"Wingtip Toys (Orick, CA)",3,Wingtip Toys,,2013/01/01
+410,"Wingtip Toys (Bernstein, TX)",3,Wingtip Toys,,2013/01/01
+411,"Wingtip Toys (Edmund, WI)",3,Wingtip Toys,,2013/01/01
+412,"Wingtip Toys (Bozeman Hot Springs, MT)",3,Wingtip Toys,,2013/01/01
+413,"Wingtip Toys (Truscott, TX)",3,Wingtip Toys,,2013/01/01
+414,"Wingtip Toys (Rose Tree, PA)",3,Wingtip Toys,,2013/01/01
+415,"Wingtip Toys (Leathersville, GA)",3,Wingtip Toys,,2013/01/01
+416,"Wingtip Toys (Necedah, WI)",3,Wingtip Toys,,2013/01/01
+417,"Wingtip Toys (Chetek, WI)",3,Wingtip Toys,,2013/01/01
+418,"Wingtip Toys (Yaak, MT)",3,Wingtip Toys,,2013/01/01
+419,"Wingtip Toys (Compass Lake, FL)",3,Wingtip Toys,,2013/01/01
+420,"Wingtip Toys (Herlong, CA)",3,Wingtip Toys,,2013/01/01
+421,"Wingtip Toys (Highland Home, AL)",3,Wingtip Toys,,2013/01/01
+422,"Wingtip Toys (Naches, WA)",3,Wingtip Toys,,2013/01/01
+423,"Wingtip Toys (Baldwin City, KS)",3,Wingtip Toys,,2013/01/01
+424,"Wingtip Toys (Heartwell, NE)",3,Wingtip Toys,,2013/01/01
+425,"Wingtip Toys (Bethel Acres, OK)",3,Wingtip Toys,,2013/01/01
+426,"Wingtip Toys (Willow Valley, AZ)",3,Wingtip Toys,,2013/01/01
+427,"Wingtip Toys (Athol Springs, NY)",3,Wingtip Toys,,2013/01/01
+428,"Wingtip Toys (Paw Paw Lake, MI)",3,Wingtip Toys,,2013/01/01
+429,"Wingtip Toys (Lilbourn, MO)",3,Wingtip Toys,,2013/01/01
+430,"Wingtip Toys (Lost River, ID)",3,Wingtip Toys,,2013/01/01
+431,"Wingtip Toys (Rosa S·nchez, PR)",3,Wingtip Toys,,2013/01/01
+432,"Wingtip Toys (Vamo, FL)",3,Wingtip Toys,,2013/01/01
+433,"Wingtip Toys (Balko, OK)",3,Wingtip Toys,,2013/01/01
+434,"Wingtip Toys (Lime Lake, NY)",3,Wingtip Toys,,2013/01/01
+435,"Wingtip Toys (Teutopolis, IL)",3,Wingtip Toys,,2013/01/01
+436,"Wingtip Toys (Gargatha, VA)",3,Wingtip Toys,,2013/01/01
+437,"Wingtip Toys (Cadogan, PA)",3,Wingtip Toys,,2013/01/01
+438,"Wingtip Toys (Lucasville, OH)",3,Wingtip Toys,,2013/01/01
+439,"Wingtip Toys (Cylon, WI)",3,Wingtip Toys,,2013/01/01
+440,"Wingtip Toys (Asher, OK)",3,Wingtip Toys,,2013/01/01
+441,"Wingtip Toys (Keosauqua, IA)",3,Wingtip Toys,,2013/01/01
+442,"Wingtip Toys (Homer City, PA)",3,Wingtip Toys,,2013/01/01
+443,"Wingtip Toys (Berville, MI)",3,Wingtip Toys,,2013/01/01
+444,"Wingtip Toys (Tea, SD)",3,Wingtip Toys,,2013/01/01
+445,"Wingtip Toys (Dacono, CO)",3,Wingtip Toys,,2013/01/01
+446,"Wingtip Toys (Saint Landry, LA)",3,Wingtip Toys,,2013/01/01
+447,"Wingtip Toys (Coin, IA)",3,Wingtip Toys,,2013/01/01
+448,"Wingtip Toys (Salt Wells, NV)",3,Wingtip Toys,,2013/01/01
+449,"Wingtip Toys (Delray, WV)",3,Wingtip Toys,,2013/01/01
+450,"Wingtip Toys (Mount Summit, IN)",3,Wingtip Toys,,2013/01/01
+451,"Wingtip Toys (Smoot, WY)",3,Wingtip Toys,,2013/01/01
+452,"Wingtip Toys (Lake Davis, CA)",3,Wingtip Toys,,2013/01/01
+453,"Wingtip Toys (Stanardsville, VA)",3,Wingtip Toys,,2013/01/01
+454,"Wingtip Toys (Corcovado, PR)",3,Wingtip Toys,,2013/01/01
+455,"Wingtip Toys (Taft Heights, CA)",3,Wingtip Toys,,2013/01/01
+456,"Wingtip Toys (West Hempstead, NY)",3,Wingtip Toys,,2013/01/01
+457,"Wingtip Toys (Portales, NM)",3,Wingtip Toys,,2013/01/01
+458,"Wingtip Toys (Coker, AL)",3,Wingtip Toys,,2013/01/01
+459,"Wingtip Toys (Haydenville, OH)",3,Wingtip Toys,,2013/01/01
+460,"Wingtip Toys (Mayhill, NM)",3,Wingtip Toys,,2013/01/01
+461,"Wingtip Toys (Vair, TX)",3,Wingtip Toys,,2013/01/01
+462,"Wingtip Toys (Crossroads, NM)",3,Wingtip Toys,,2013/01/01
+463,"Wingtip Toys (Cowlington, OK)",3,Wingtip Toys,,2013/01/01
+464,"Wingtip Toys (Glen Ullin, ND)",3,Wingtip Toys,,2013/01/01
+465,"Wingtip Toys (Oologah, OK)",3,Wingtip Toys,,2013/01/01
+466,"Wingtip Toys (Lytle, TX)",3,Wingtip Toys,,2013/01/01
+467,"Wingtip Toys (Mahaffey, PA)",3,Wingtip Toys,,2013/01/01
+468,"Wingtip Toys (Sunburg, MN)",3,Wingtip Toys,,2013/01/01
+469,"Wingtip Toys (Johnetta, KY)",3,Wingtip Toys,,2013/01/01
+470,"Wingtip Toys (Universal City, TX)",3,Wingtip Toys,,2013/01/01
+471,"Wingtip Toys (Ridgemark, CA)",3,Wingtip Toys,,2013/01/01
+472,"Wingtip Toys (San Jacinto, CA)",3,Wingtip Toys,,2013/01/01
+473,"Wingtip Toys (Floriston, CA)",3,Wingtip Toys,,2013/01/01
+474,"Wingtip Toys (Bokeelia, FL)",3,Wingtip Toys,,2013/01/01
+475,"Wingtip Toys (Cale, AR)",3,Wingtip Toys,,2013/01/01
+476,"Wingtip Toys (Karthaus, PA)",3,Wingtip Toys,,2013/01/01
+477,"Wingtip Toys (Glancy, MS)",3,Wingtip Toys,,2013/01/01
+478,"Wingtip Toys (Stoneboro, PA)",3,Wingtip Toys,,2013/01/01
+479,"Wingtip Toys (Mier, IN)",3,Wingtip Toys,,2013/01/01
+480,"Wingtip Toys (Wapinitia, OR)",3,Wingtip Toys,,2013/01/01
+481,"Wingtip Toys (White Church, MO)",3,Wingtip Toys,,2013/01/01
+482,"Wingtip Toys (Caton, NY)",3,Wingtip Toys,,2013/01/01
+483,"Wingtip Toys (Plum Branch, SC)",3,Wingtip Toys,,2013/01/01
+484,"Wingtip Toys (Mauldin, SC)",3,Wingtip Toys,,2013/01/01
+485,"Wingtip Toys (Bonner Springs, KS)",3,Wingtip Toys,,2013/01/01
+486,"Wingtip Toys (Lowellville, OH)",3,Wingtip Toys,,2013/01/01
+487,"Wingtip Toys (Elverson, PA)",3,Wingtip Toys,,2013/01/01
+488,"Wingtip Toys (Isabela, PR)",3,Wingtip Toys,,2013/01/01
+489,"Wingtip Toys (Sayner, WI)",3,Wingtip Toys,,2013/01/01
+490,"Wingtip Toys (Beals, ME)",3,Wingtip Toys,,2013/01/01
+491,"Wingtip Toys (Morton Grove, IL)",3,Wingtip Toys,,2013/01/01
+492,"Wingtip Toys (Birds, IL)",3,Wingtip Toys,,2013/01/01
+493,"Wingtip Toys (Federalsburg, MD)",3,Wingtip Toys,,2013/01/01
+494,"Wingtip Toys (Pikeview, CO)",3,Wingtip Toys,,2013/01/01
+495,"Wingtip Toys (Boalsburg, PA)",3,Wingtip Toys,,2013/01/01
+496,"Wingtip Toys (Port Hueneme, CA)",3,Wingtip Toys,,2013/01/01
+497,"Wingtip Toys (Verdery, SC)",3,Wingtip Toys,,2013/01/01
+498,"Wingtip Toys (Obetz, OH)",3,Wingtip Toys,,2013/01/01
+499,"Wingtip Toys (East Fultonham, OH)",3,Wingtip Toys,,2013/01/01
+500,"Wingtip Toys (Obion, TN)",3,Wingtip Toys,,2013/01/01
+501,"Wingtip Toys (Cavendish, VT)",3,Wingtip Toys,,2013/01/01
+502,"Wingtip Toys (Miesville, MN)",3,Wingtip Toys,,2013/01/01
+503,"Wingtip Toys (Valhalla, NC)",3,Wingtip Toys,,2013/01/01
+504,"Wingtip Toys (Cape Neddick, ME)",3,Wingtip Toys,,2013/01/01
+505,"Wingtip Toys (Silver Plume, CO)",3,Wingtip Toys,,2013/01/01
+506,"Wingtip Toys (North Beach Haven, NJ)",3,Wingtip Toys,,2013/01/01
+507,"Wingtip Toys (Downingtown, PA)",3,Wingtip Toys,,2013/01/01
+508,"Wingtip Toys (Branson West, MO)",3,Wingtip Toys,,2013/01/01
+509,"Wingtip Toys (Bergen Park, CO)",3,Wingtip Toys,,2013/01/01
+510,"Wingtip Toys (Grabill, IN)",3,Wingtip Toys,,2013/01/01
+511,"Wingtip Toys (North Manitou, MI)",3,Wingtip Toys,,2013/01/01
+512,"Wingtip Toys (Philip, SD)",3,Wingtip Toys,,2013/01/01
+513,"Wingtip Toys (Straughn, IN)",3,Wingtip Toys,,2013/01/01
+514,"Wingtip Toys (Gilford, NH)",3,Wingtip Toys,,2013/01/01
+515,"Wingtip Toys (Del Valle, TX)",3,Wingtip Toys,,2013/01/01
+516,"Wingtip Toys (Harkers Island, NC)",3,Wingtip Toys,,2013/01/01
+517,"Wingtip Toys (Licking, MO)",3,Wingtip Toys,,2013/01/01
+518,"Wingtip Toys (Raton, NM)",3,Wingtip Toys,,2013/01/01
+519,"Wingtip Toys (Boynton, OK)",3,Wingtip Toys,,2013/01/01
+520,"Wingtip Toys (Frenchburg, KY)",3,Wingtip Toys,,2013/01/01
+521,"Wingtip Toys (Robertsdale, AL)",3,Wingtip Toys,,2013/01/01
+522,"Wingtip Toys (Dickerson, MD)",3,Wingtip Toys,,2013/01/01
+523,"Wingtip Toys (Bruceton Mills, WV)",3,Wingtip Toys,,2013/01/01
+524,"Wingtip Toys (Cloquet, MN)",3,Wingtip Toys,,2013/01/01
+525,"Wingtip Toys (Claycomo, MO)",3,Wingtip Toys,,2013/01/01
+526,"Wingtip Toys (Beekmantown, NY)",3,Wingtip Toys,,2013/01/01
+527,"Wingtip Toys (Islip Terrace, NY)",3,Wingtip Toys,,2013/01/01
+528,"Wingtip Toys (Rich Creek, VA)",3,Wingtip Toys,,2013/01/01
+529,"Wingtip Toys (Griswoldville, GA)",3,Wingtip Toys,,2013/01/01
+530,"Wingtip Toys (East Mountain, TX)",3,Wingtip Toys,,2013/01/01
+531,"Wingtip Toys (Omer, MI)",3,Wingtip Toys,,2013/01/01
+532,"Wingtip Toys (Waycross, GA)",3,Wingtip Toys,,2013/01/01
+533,"Wingtip Toys (Nichols Hills, OK)",3,Wingtip Toys,,2013/01/01
+534,"Wingtip Toys (Plaquemine, LA)",3,Wingtip Toys,,2013/01/01
+535,"Wingtip Toys (Triadelphia, WV)",3,Wingtip Toys,,2013/01/01
+536,"Wingtip Toys (Ferney, SD)",3,Wingtip Toys,,2013/01/01
+537,"Wingtip Toys (Akhiok, AK)",3,Wingtip Toys,,2013/01/01
+538,"Wingtip Toys (Deeson, MS)",3,Wingtip Toys,,2013/01/01
+539,"Wingtip Toys (Nuangola, PA)",3,Wingtip Toys,,2013/01/01
+540,"Wingtip Toys (Weld, ME)",3,Wingtip Toys,,2013/01/01
+541,"Wingtip Toys (Mickleton, NJ)",3,Wingtip Toys,,2013/01/01
+542,"Wingtip Toys (Schererville, IN)",3,Wingtip Toys,,2013/01/01
+543,"Wingtip Toys (Lexington Heights, MI)",3,Wingtip Toys,,2013/01/01
+544,"Wingtip Toys (Broomtown, AL)",3,Wingtip Toys,,2013/01/01
+545,"Wingtip Toys (Jamison, IA)",3,Wingtip Toys,,2013/01/01
+546,"Wingtip Toys (Key Biscayne, FL)",3,Wingtip Toys,,2013/01/01
+547,"Wingtip Toys (Chaseley, ND)",3,Wingtip Toys,,2013/01/01
+548,"Wingtip Toys (Indian Creek, IL)",3,Wingtip Toys,,2013/01/01
+549,"Wingtip Toys (Lake Ronkonkoma, NY)",3,Wingtip Toys,,2013/01/01
+550,"Wingtip Toys (Morrison Bluff, AR)",3,Wingtip Toys,,2013/01/01
+551,"Wingtip Toys (Huntingburg, IN)",3,Wingtip Toys,,2013/01/01
+552,"Wingtip Toys (Shay, PA)",3,Wingtip Toys,,2013/01/01
+553,"Wingtip Toys (Helotes, TX)",3,Wingtip Toys,,2013/01/01
+554,"Wingtip Toys (Hollandsburg, IN)",3,Wingtip Toys,,2013/01/01
+555,"Wingtip Toys (Liberty Grove, MD)",3,Wingtip Toys,,2013/01/01
+556,"Wingtip Toys (Morita, TX)",3,Wingtip Toys,,2013/01/01
+557,"Wingtip Toys (New Laguna, NM)",3,Wingtip Toys,,2013/01/01
+558,"Wingtip Toys (Bourneville, OH)",3,Wingtip Toys,,2013/01/01
+559,"Wingtip Toys (Mendoza, TX)",3,Wingtip Toys,,2013/01/01
+560,"Wingtip Toys (Palmas del Mar, PR)",3,Wingtip Toys,,2013/01/01
+561,"Wingtip Toys (Marion Junction, AL)",3,Wingtip Toys,,2013/01/01
+562,"Wingtip Toys (Ware Shoals, SC)",3,Wingtip Toys,,2013/01/01
+563,"Wingtip Toys (Lostine, OR)",3,Wingtip Toys,,2013/01/01
+564,"Wingtip Toys (Tilleda, WI)",3,Wingtip Toys,,2013/01/01
+565,"Wingtip Toys (Wapiti, WY)",3,Wingtip Toys,,2013/01/01
+566,"Wingtip Toys (Amado, AZ)",3,Wingtip Toys,,2013/01/01
+567,"Wingtip Toys (Jeromesville, OH)",3,Wingtip Toys,,2013/01/01
+568,"Wingtip Toys (Ovilla, TX)",3,Wingtip Toys,,2013/01/01
+569,"Wingtip Toys (West Frostproof, FL)",3,Wingtip Toys,,2013/01/01
+570,"Wingtip Toys (Flomaton, AL)",3,Wingtip Toys,,2013/01/01
+571,"Wingtip Toys (Pawlet, VT)",3,Wingtip Toys,,2013/01/01
+572,"Wingtip Toys (Trout Run, PA)",3,Wingtip Toys,,2013/01/01
+573,"Wingtip Toys (Marin City, CA)",3,Wingtip Toys,,2013/01/01
+574,"Wingtip Toys (Molalla, OR)",3,Wingtip Toys,,2013/01/01
+575,"Wingtip Toys (Trumansburg, NY)",3,Wingtip Toys,,2013/01/01
+576,"Wingtip Toys (Goodings Grove, IL)",3,Wingtip Toys,,2013/01/01
+577,"Wingtip Toys (Cherryplain, NY)",3,Wingtip Toys,,2013/01/01
+578,"Wingtip Toys (Bell Acres, PA)",3,Wingtip Toys,,2013/01/01
+579,"Wingtip Toys (Connoquenessing, PA)",3,Wingtip Toys,,2013/01/01
+580,"Wingtip Toys (Sarversville, PA)",3,Wingtip Toys,,2013/01/01
+581,"Wingtip Toys (Munich, ND)",3,Wingtip Toys,,2013/01/01
+582,"Wingtip Toys (Montoya, NM)",3,Wingtip Toys,,2013/01/01
+583,"Wingtip Toys (Knights Landing, CA)",3,Wingtip Toys,,2013/01/01
+584,"Wingtip Toys (Cache, OK)",3,Wingtip Toys,,2013/01/01
+585,"Wingtip Toys (Towaco, NJ)",3,Wingtip Toys,,2013/01/01
+586,"Wingtip Toys (Lynne, FL)",3,Wingtip Toys,,2013/01/01
+587,"Wingtip Toys (Plata, TX)",3,Wingtip Toys,,2013/01/01
+588,"Wingtip Toys (Oak Point, TX)",3,Wingtip Toys,,2013/01/01
+589,"Wingtip Toys (Alcester, SD)",3,Wingtip Toys,,2013/01/01
+590,"Wingtip Toys (McAdenville, NC)",3,Wingtip Toys,,2013/01/01
+591,"Wingtip Toys (Idaho City, ID)",3,Wingtip Toys,,2013/01/01
+592,"Wingtip Toys (Dunkerton, IA)",3,Wingtip Toys,,2013/01/01
+593,"Wingtip Toys (Cuyamungue, NM)",3,Wingtip Toys,,2013/01/01
+594,"Wingtip Toys (Marfa, TX)",3,Wingtip Toys,,2013/01/01
+595,"Wingtip Toys (Accomac, VA)",3,Wingtip Toys,,2013/01/01
+596,"Wingtip Toys (Cos Cob, CT)",3,Wingtip Toys,,2013/01/01
+597,"Wingtip Toys (Haycock, AK)",3,Wingtip Toys,,2013/01/01
+598,"Wingtip Toys (Kapa'a, HI)",3,Wingtip Toys,,2013/01/01
+599,"Wingtip Toys (Dickworsham, TX)",3,Wingtip Toys,,2013/01/01
+600,"Wingtip Toys (Caro, MI)",3,Wingtip Toys,,2013/01/01
+601,"Wingtip Toys (Ruthsburg, MD)",3,Wingtip Toys,,2013/01/01
+801,Eric Torres,7,,3150,2013/01/01
+802,Cosmina Vlad,7,,3087,2013/01/01
+803,Bala Dixit,3,,2000,2013/01/01
+804,Aleksandrs Riekstins,5,,2200,2013/01/01
+805,Ratan Poddar,3,,3465,2013/01/01
+806,Shi Tu,3,,3150,2013/01/01
+807,Gunnar Lohmus,6,,3100,2013/01/01
+808,Jackson Kolios,5,,1890,2013/01/01
+809,Madhu Dwivedi,5,,1785,2013/01/01
+810,Alena Kellnerova,7,,1200,2013/01/01
+811,Surendra Sahu,3,,2100,2013/01/01
+812,Celica Barajas,4,,2200,2013/01/01
+813,Shyam Poddar,7,,2730,2013/01/01
+814,Johanna Hoornstra,3,,2310,2013/01/01
+815,Libuse Valentova,3,,2900,2013/01/01
+816,Harsha Huq,6,,2400,2013/01/01
+817,Agrita Kanepa,4,,2100,2013/01/01
+818,Liia Orav,3,,1155,2013/01/01
+819,Santiago Vera,5,,1800,2013/01/01
+820,Knut Svensson,5,,3500,2013/01/01
+821,Kwanjai Saowaluk,4,,2520,2013/01/01
+822,Suparna Bhattacharya,4,,1575,2013/01/01
+823,Francisca Laureano,6,,3500,2013/01/01
+824,Risto Valbe,4,,3360,2013/01/01
+825,Jayanta Thakur,6,,3000,2013/01/01
+826,Leila Carvalho,3,,3200,2013/01/01
+827,Crina Grasu,5,,2500,2013/01/01
+828,Sercan Celik,6,,1874.25,2013/01/01
+829,Jack Walker,4,,3500,2013/01/01
+830,Jana Fialova,3,,2205,2013/01/01
+831,Bhaavan Rai,7,,3885,2013/01/01
+832,Aakriti Byrraju,4,,3500,2013/01/01
+833,Devraj Rao,3,,3465,2013/01/01
+834,Cong Hoa,6,,1500,2013/01/01
+835,Dominic Davignon,4,,3150,2013/01/01
+836,Abel Spirlea,3,,1600,2013/01/01
+837,Anil Sarkar,4,,1400,2013/01/01
+838,Pavel Bogdanov,7,,1984.5,2013/01/01
+839,Juan Morse,3,,4200,2013/01/01
+840,Rodrigo Figueiredo,3,,2000,2013/01/01
+841,Camille Authier,6,,2100,2013/01/01
+842,Biju Deb,6,,2600,2013/01/01
+843,Marija Justina Pasek,7,,1100,2013/01/01
+844,Durdanah Abbasi,4,,1890,2013/01/01
+845,Emilie Hrdlickova,7,,1400,2013/01/01
+846,Malorie Bousquet,6,,2200,2013/01/01
+847,Kristiina Ivanov,5,,1890,2013/01/01
+848,Alvin Bollinger,5,,2900,2013/01/01
+849,Sabine Zalite,4,,1500,2013/01/01
+850,Daakshaayaani Sankaramanchi,6,,1900,2013/01/01
+851,Ebru Erdogan,6,,1890,2013/01/01
+852,Bhagavaan Atluri,4,,2200,2013/01/01
+853,Caterina Pinto,6,,3000,2013/01/01
+854,Daakshaayaani Kommineni,3,,3700,2013/01/01
+855,Anna Mazzanti,5,,1764,2013/01/01
+856,Satish Mittal,7,,2400,2013/01/01
+857,Clarissa Manfrin,6,,2000,2013/01/01
+858,Bimla PrabhupƒÅda,3,,3800,2013/01/01
+859,Shah Alizadeh,6,,3000,2013/01/01
+860,Marcela Lucescu,7,,2900,2013/01/01
+861,Amarasimha Vinjamuri,4,,2500,2013/01/01
+862,Lana Goransson,4,,1400,2013/01/01
+863,Jakub Lukes,7,,2100,2013/01/01
+864,Mikhail Degtyarev,5,,1300,2013/01/01
+865,Bijoya Thakur,6,,2900,2013/01/01
+866,Jay Bhuiyan,6,,1890,2013/01/01
+867,Jasna Cerkez,5,,3700,2013/01/01
+868,Laura Sykorova,3,,2100,2013/01/01
+869,Abel Tatarescu,3,,3858.75,2013/01/01
+870,In-Su Bae,6,,3600,2013/01/01
+871,Darshana Madhunapantula,5,,1800,2013/01/01
+872,Katerina Hadrabova,7,,2094.75,2013/01/01
+873,Hana Hlouskova,4,,2700,2013/01/01
+874,Daniel Martensson,3,,3357.11,2013/01/01
+875,Philip Walker,3,,3300,2013/01/01
+876,Marie LeBatelier,3,,1575,2013/01/01
+877,Leyla Siavashi,6,,3465,2013/01/01
+878,Miriam House,7,,4283.21,2013/01/01
+879,Jitka Necesana,5,,3200,2013/01/01
+880,Edmee Glissen,5,,2600,2013/01/01
+881,Magdalena Michnova,5,,3100,2013/01/01
+882,Maryann Huddleston,6,,2700,2013/01/01
+883,Radha Barua,6,,3500,2013/01/01
+884,Anindya Ghatak,5,,3800,2013/01/01
+885,Chandrashekhar Dasgupta,7,,2500,2013/01/01
+886,Debbie Molina,4,,2400,2013/01/01
+887,Baran Jonsson,4,,3990,2013/01/01
+888,Jai Lamble,7,,3700,2013/01/01
+889,Sointu Savonheimo,6,,1300,2013/01/01
+890,Olya Izmaylov,5,,4862.03,2013/01/01
+891,Taneli Riutta,4,,2976.75,2013/01/01
+892,Bahaar Asef zade,4,,1890,2013/01/01
+893,Leyla Asef zade,3,,2000,2013/01/01
+894,Gabriela Hernandes,7,,2415,2013/01/01
+895,Geza Roman,7,,2425.5,2013/01/01
+896,Leonardo Folliero,4,,3300,2013/01/01
+897,Allan Mannik,7,,3500,2013/01/01
+898,Gopalgobinda Sikdar,5,,4299.75,2013/01/01
+899,Chin-Sun Chang,7,,4095,2013/01/01
+900,Lilli Sokk,6,,2300,2013/01/01
+901,Adrian Andreasson,7,,3000,2013/01/01
+902,Kamila Michnova,4,,1700,2013/01/01
+903,Bing Han,5,,1680,2013/01/01
+904,Olafs Rozitis,7,,4000,2013/01/01
+905,Sara Huiting,4,,2400,2013/01/01
+906,Ajitaab Pakalapati,5,,3300,2013/01/01
+907,Eugen Agafitei,4,,3500,2013/01/01
+908,Sumati Bhat,3,,3675,2013/01/01
+909,Dena Glissen,4,,3200,2013/01/01
+910,Elina Kaleja,6,,1200,2013/01/01
+911,Liidia Lepp,6,,3360,2013/01/01
+912,Volkan senturk,5,,2600,2013/01/01
+913,Violetta KlanCisar,4,,3197.25,2013/01/01
+914,Chandana Shasthri,4,,3675,2013/01/01
+915,Ana Florea,7,,1984.5,2013/01/01
+916,Pinja Jantunen,6,,1400,2013/01/01
+917,Pari Hosseini,3,,1300,2013/01/01
+918,Isidora Morales,3,,1600,2013/01/01
+919,Kertu Sokk,5,,3150,2013/01/01
+920,Gayatri Gajula,5,,4000,2013/01/01
+921,Victoria Lacusta,4,,4283.21,2013/01/01
+922,Sumati Chatterjee,6,,2520,2013/01/01
+923,Tai Bach,3,,3700,2013/01/01
+924,Eva Schulteisz,3,,2700,2013/01/01
+925,Can ozcan,7,,4299.75,2013/01/01
+926,Richard Friar,7,,2200,2013/01/01
+927,Matyas Sedlar,3,,1470,2013/01/01
+928,Arijit Bhuiyan,5,,2200,2013/01/01
+929,Vladimir Henzl,4,,1600,2013/01/01
+930,Shantanu Huq,6,,3748.5,2013/01/01
+931,Nada Jovanovic,7,,2300,2013/01/01
+932,Nicolo Cattaneo,7,,1800,2013/01/01
+933,Joel Carrillo,5,,3700,2013/01/01
+934,Ivan Sepulveda,3,,2315.25,2013/01/01
+935,Daevasree Samavedam,7,,1700,2013/01/01
+936,Ludmila Smidova,3,,3900,2013/01/01
+937,Manca Hrastovsek,6,,1155,2013/01/01
+938,Anna Gyarmathi,3,,3300,2013/01/01
+939,Ioana Florea,4,,2000,2013/01/01
+940,Lorin Astrom,6,,1260,2013/01/01
+941,Bishwa Chatterjee,3,,1700,2013/01/01
+942,Chaayaadaevi Sonti,7,,1700,2013/01/01
+943,Drazenka Jelic,3,,2600,2013/01/01
+944,Ida Celma,3,,3990,2013/01/01
+945,Hoc Tran,5,,1543.5,2013/01/01
+946,David safranek,4,,3990,2013/01/01
+947,Svetlana Todorovic,4,,2800,2013/01/01
+948,Richard Zahradnicek,4,,3465,2013/01/01
+949,Seo-yun Paik,7,,3675,2013/01/01
+950,Emily Whittle,7,,2900,2013/01/01
+951,Eliza Persson,4,,3465,2013/01/01
+952,Chuan Wattanasin,3,,3200,2013/01/01
+953,Linh Dao,4,,3360,2013/01/01
+954,Nasrin Omidzadeh,4,,3800,2013/01/01
+955,Raghu Sandhu,3,,1700,2013/01/01
+956,Nhung Thach,5,,1984.5,2013/01/01
+957,Hee-Young Suh,3,,2200,2013/01/01
+958,Valentin Tirlea,6,,3300,2013/01/01
+959,Dhaatri Chavva,3,,1995,2013/01/01
+960,Edgar Jogi,5,,1500,2013/01/01
+961,Rani Ganguly,6,,3600,2013/01/01
+962,Bhagavati Vinjamuri,4,,1400,2013/01/01
+963,Be Trang,7,,2700,2013/01/01
+964,Ingrida Zeltina,4,,2600,2013/01/01
+965,Phoung Cu,7,,3307.5,2013/01/01
+966,Sara Walkky,4,,2205,2013/01/01
+967,Meera Patel,6,,2100,2013/01/01
+968,Anca Gogean,7,,3400,2013/01/01
+969,Staffan Persson,5,,3465,2013/01/01
+970,Isidora Urias,3,,2300,2013/01/01
+971,Dhanishta Mokkapati,7,,3150,2013/01/01
+972,Lakshmi Benipal,5,,2205,2013/01/01
+973,Kumar Kamei,3,,3300,2013/01/01
+974,Emil Roman,5,,1600,2013/01/01
+975,Prabodh Nair,3,,3000,2013/01/01
+976,Alinne Matos,5,,3858.75,2013/01/01
+977,Mauno Laurila,3,,1400,2013/01/01
+978,Baalaamjali Devulapalli,4,,3638.25,2013/01/01
+979,Melani Ravlen,7,,3465,2013/01/01
+980,Om Yadav,3,,2900,2013/01/01
+981,Mahmut ozbek,6,,3400,2013/01/01
+982,Yves Belisle,4,,3150,2013/01/01
+983,Sabine Alksne,4,,2730,2013/01/01
+984,Kamala Nishad,7,,2900,2013/01/01
+985,Roko Ilic,7,,2400,2013/01/01
+986,Neil Farrelly,3,,1680,2013/01/01
+987,Akhil Nadar,4,,3465,2013/01/01
+988,Maksims Krastins,6,,1900,2013/01/01
+989,Milinka Zujovic,6,,1680,2013/01/01
+990,Andris Saulitis,7,,2894.06,2013/01/01
+991,Valter Viiding,4,,3780,2013/01/01
+992,Amarakumaar Gadiyaram,3,,1890,2013/01/01
+993,Gasper Havzija,6,,3500,2013/01/01
+994,Libuse Kuchtova,4,,2400,2013/01/01
+995,Kumar Naicker,3,,1100,2013/01/01
+996,Laszlo Gardenier,6,,2200,2013/01/01
+997,Nada Ana Slosar,4,,3500,2013/01/01
+998,Mahavir Sonkar,5,,3300,2013/01/01
+999,Kristi Part,4,,3600,2013/01/01
+1000,Krishnam Allu,3,,2415,2013/01/01
+1001,Dinh Mai,5,,4095,2013/01/27
+1002,Stefan Selezeanu,5,,3300,2013/02/22
+1003,Hue Ton,4,,4095,2013/03/25
+1004,Drishti Bose,6,,3600,2013/04/01
+1005,Bhadram Kamasamudram,3,,2300,2013/04/06
+1006,Taj Syme,3,,3100,2013/04/10
+1007,Irma Berzina,7,,2600,2013/04/13
+1008,Vedrana Kovacevic,3,,2100,2013/04/14
+1009,Bhagavateeprasaad Malladi,5,,2940,2013/05/03
+1010,Serdar ozCelik,4,,1260,2013/05/06
+1011,Rajeev Sandhu,6,,4000,2013/06/11
+1012,Urve Kasesalu,7,,2000,2013/06/16
+1013,Annette  Hetu,5,,4095,2013/06/22
+1014,Narendra Tickoo,3,,3100,2013/07/18
+1015,Isa Hulsegge,5,,1500,2013/08/01
+1016,Aive Petrov,4,,3100,2013/08/10
+1017,David Novacek ,6,,2730,2013/08/15
+1018,Nils Kaulins,5,,1700,2013/09/08
+1019,Dhanishta Pullela,3,,1575,2013/10/03
+1020,Hai Banh,5,,2625,2013/10/23
+1021,Fabrice Cloutier,4,,1100,2013/11/19
+1022,Nadir Seddigh,5,,3150,2013/11/25
+1023,Farzana Habibi,7,,3045,2013/12/01
+1024,Arka Chatterjee,4,,3500,2013/12/26
+1025,Tuulikki Linna,6,,1433.25,2014/01/15
+1026,Daniella Cavalcante,5,,1543.5,2014/01/17
+1027,Serdar ozden,7,,2100,2014/02/22
+1028,Emma Van Zant,6,,2646,2014/05/14
+1029,Veronika Necesana,3,,4095,2014/05/18
+1030,Chompoo Atitarn,5,,4000,2014/06/18
+1031,Dipti Shah,6,,3700,2014/08/03
+1032,Som Mukherjee,3,,3100,2014/08/25
+1033,Cuneyt Arslan,4,,2000,2014/08/26
+1034,Aishwarya Dantuluri,3,,3885,2014/09/03
+1035,Manjunatha Karnik,5,,3300,2014/11/08
+1036,Erik Malk,5,,1700,2014/11/13
+1037,David Jaramillo,7,,2100,2014/11/21
+1038,Damodara Trivedi,6,,2000,2014/12/03
+1039,Bhaamini Palagummi,6,,2300,2015/01/13
+1040,Damodar Shenoy,3,,2520,2015/01/16
+1041,Tomo Vidovic,4,,3045,2015/01/18
+1042,Nguyen Banh,3,,2500,2015/01/22
+1043,Raj Verma,7,,3500,2015/01/30
+1044,Hanita Nookala,3,,2000,2015/02/12
+1045,Matteo Cattaneo,4,,2400,2015/02/22
+1046,Christian Couet,5,,2940,2015/06/12
+1047,Ivana Hadrabova,5,,1600,2015/07/28
+1048,Abhra Ganguly,6,,3150,2015/08/09
+1049,Amet Shergill,7,,1200,2015/08/13
+1050,Amrita Ganguly,4,,3255,2015/09/23
+1051,Sylvie Laramee,6,,2800,2015/09/24
+1052,Ian Olofsson,4,,3300,2015/09/26
+1053,Luis Saucedo,5,,2415,2015/11/27
+1054,Emma Salpa,4,,1680,2015/11/29
+1055,Adriana Pena,5,,3800,2015/11/30
+1056,Kalyani Benjaree,7,,4000,2015/12/20
+1057,Ganesh Majumdar,5,,1600,2016/01/09
+1058,Jaroslav Fisar,6,,1900,2016/02/01
+1059,Jibek Juniskyzy,4,,2083.73,2016/03/13
+1060,Anand Mudaliyar,7,,1100,2016/04/23
+1061,Agrita Abele,5,,1600,2016/05/07
+1062,Elvira Konovalova,5,,2000,2016/08/01
+1063,Ondrej Polak,3,,1400,2016/09/29
+1064,Logan Dixon,4,,2400,2016/10/10
+1065,Kim-ly Vanh,6,,2730,2016/10/18
+1066,Lucia Hinojosa,3,,2835,2016/10/24
+1067,Ilgonis Prieditis,6,,1500,2016/11/13
+1068,Antonio Carlos Rocha,4,,2520,2016/11/25
+1069,Peep Lill,7,,2400,2016/12/06
+1070,Spidols Podnieks,6,,1400,2017/03/03
+1071,Kevin Rummo,3,,1300,2017/04/17
+1072,Riccardo Esposito,7,,2600,2017/05/05
+1073,Adrian Lindqvist,7,,2300,2017/05/15
+1074,Gulzar Sarkar,3,,3000,2017/10/08
+1075,Chaowalit Rojumanong,7,,2100,2017/11/19
+1076,Deepa Nandamuri,4,,3400,2017/11/30
+1077,Nhung Ton,7,,3100,2017/12/12
+1078,Ivan Arenas,4,,1700,2017/12/14
+1079,Umut Acar,5,,1260,2017/12/19
+1080,Sani Shasthri,6,,2800,2018/01/17
+1081,Celik TunC,5,,1600,2018/02/06
+1082,Javiera Laureano,5,,1100,2018/03/08
+1083,Soner Guler,3,,3800,2018/03/20
+1084,Mehmet Arslan,7,,1900,2018/03/22
+1085,Katarina Filipovic,6,,2300,2018/04/14
+1086,Noora Piili,4,,4000,2018/04/22
+1087,Essie Braggs,3,,3800,2018/05/18
+1088,Dita Kreslina,4,,4000,2018/05/29
+1089,Miljan Stojanovic,7,,3800,2018/06/10
+1090,Cuc Du,7,,1470,2018/06/16
+1091,Maria Nechita,4,,2100,2018/06/17
+1092,Rato Novakovic,4,,3300,2018/07/10
+1093,Ashutosh Bandopadhyay,6,,2600,2018/10/17
+1094,Gagan Sengupta,4,,3500,2018/10/26
+1095,Aruna Cheema,7,,2400,2018/11/07
+1096,Binoba Dey,6,,2835,2019/01/15
+1097,Kanan Malakar,5,,4000,2019/03/20
+1098,Cosmina Leonte,6,,1600,2019/03/24
+1099,Harsha Raju,3,,3700,2019/04/01
+1100,Angelica Nilsson,6,,3300,2019/04/12
+1101,Alfonso Barese,4,,2300,2019/04/22
+1102,Farzana Abbasi,5,,1600,2019/05/02
+1103,Zoltan Gero,3,,3100,2019/05/03
+1104,Esther Jobrani,7,,1500,2019/08/12
+1105,Coralie Monty,6,,2900,2019/09/20
+1106,Nandita Bhuiyan,7,,3800,2019/09/21
+1107,Alen Kustrin,4,,2700,2019/09/24
+1108,Nichole  Deslauriers,6,,3600,2019/10/10
+1109,Julia Eder,4,,2100,2019/10/16
+1110,Matija Rusl,7,,2200,2019/12/16
+1111,Rabindra Kaul,5,,3900,2020/01/07
+1112,Inna Kask,5,,3100,2020/01/19
+1113,Jautrite Avotina,6,,3100,2020/03/04
+1114,Max Shand,6,,3600,2020/04/13
+1115,Kashi Singh,6,,1100,2020/04/20
+1116,Arda Gunes,3,,3400,2020/06/28
+1117,Damyanti Bhamidipati,3,,3100,2020/07/21
+1118,Afsar-ud-Din Zare,3,,4000,2020/08/27
+1119,Arundhati Majumdar,5,,2400,2020/08/31
+1120,Marcela Antunes,3,,3500,2020/09/10
+1121,Manuel Jaramillo,4,,3528,2020/09/23
+1122,Jayanti Pandit,5,,4000,2020/10/21
+1123,Phoung Du,5,,2600,2020/11/15
+1124,Tapas Sikdar,4,,3300,2020/11/28
+1125,Divyendu Sen,7,,2500,2020/12/02
+1126,Pinja Pekkanen,7,,2600,2020/12/07
+1127,Chandrani Dey,7,,1680,2021/01/15
+1128,Teresa Fields,4,,2600,2021/01/21
+1129,Sashi Dev,5,,3200,2021/01/28
+1130,Aita Kasesalu,6,,1500,2021/02/08
+1131,Dhanya Mokkapati,4,,3300,2021/02/11
+1132,Risto Lepmets,3,,3100,2021/03/22
+1133,Aykut ozkan,7,,3400,2021/04/01
+1134,Charline Monjeau,3,,1400,2021/06/19
+1135,Bianca Lack,5,,2500,2021/06/24
+1136,Liga Dumina,6,,1500,2021/07/16
+1137,Tami Shuler,4,,2000,2021/07/18
+1138,Mai Thai,6,,2940,2021/09/20
+1139,Risto Lill,5,,2800,2021/09/29
+1140,Roberto Sal,7,,3800,2021/10/03
+1141,Prasad Raju,6,,2400,2021/10/06
+1142,Jagdish Shergill,3,,2500,2021/10/08
+1143,Kailash Mittal,6,,3800,2021/11/04
+1144,Dhirendro Ghatak,7,,2310,2022/01/06
+1145,Karita Jantunen,4,,2800,2022/01/09
+1146,Ramesh Das,7,,2500,2022/03/08
+1147,Ivan Ignatyev,7,,2200,2022/05/03
+1148,Linda Ohl,4,,1500,2022/05/14
+1149,Min-ji Nan,7,,1600,2022/05/17
+1150,Monika Kozakova,5,,3200,2022/05/18
+1151,Tereza Cermakova,3,,3400,2022/05/19
+1152,Shyam Sarma,5,,1100,2022/06/16
+1153,Marcela Mencikova,5,,3100,2022/07/02
+1154,Min-ji Shim,5,,1800,2022/07/18
+1155,Truman Schmidt,7,,2000,2022/08/03
+1156,Aishwarya Tottempudi,6,,2700,2022/08/12
+1157,Arnost Hovorka,3,,1100,2022/08/17
+1158,Falgun Bagchi,5,,1100,2022/08/18
+1159,Carlos Aguayo,5,,3600,2022/08/22
+1160,Ivana Popov,5,,2600,2022/09/19
+1161,Aleksandra Semjonov,5,,3700,2022/10/13
+1162,Aleksandra Abola,3,,1900,2022/11/30
+1163,Daniela Lo Duca,6,,2300,2023/01/04
+1164,Philippe Bellefeuille,3,,1600,2023/02/13
+1165,Bianh Banh,5,,3900,2023/02/17
+1166,Veronika Svancarova,5,,1300,2023/05/15
+1167,Hardi Laurits,6,,2900,2023/05/22
+1168,Gita Bhutia,3,,2900,2023/05/27
+1169,Hyun-Shik Lee,3,,3900,2023/06/20
+1170,Mark Korjus,4,,1400,2023/07/10
+1171,Miloslav Fisar,6,,3400,2023/07/14
+1172,Mudar Mihajlovik,6,,1700,2023/09/13
+1173,Kyle Redd,7,,1400,2023/10/04
+1174,Nicola Dellucci,5,,3200,2023/10/25
+1175,Cosmin Vulpes,5,,2400,2023/10/26
+1176,Damla Yavuz,3,,3000,2023/11/06
+1177,Promita Chattopadhyay,4,,3900,2023/11/25
+1178,Lorenzo Howland,3,,3100,2023/12/13
+1179,Haarati Pendyala,3,,4000,2023/12/27
+1180,Lilli Peetre,6,,2500,2024/01/16
+1181,Gadhar Das,3,,3900,2024/01/20
+1182,Alok Sridhara,4,,3100,2024/01/23
+1183,Luca Barese,6,,2800,2024/02/02
+1184,Rafael Azevedo,7,,1700,2024/02/16
+1185,Rui Carvalho,7,,2400,2024/02/22
+1186,Sohail Shasthri,6,,3800,2024/02/24
+1187,Yonca Basturk,5,,2300,2024/03/17
+1188,Aleksandrs Purins,6,,3100,2024/04/22
+1189,Naveen Scindia,5,,1700,2024/04/25
+1190,Irma Auzina,6,,1400,2024/05/07
+1191,Preecha Suppamongkon,5,,4000,2024/05/09
+1192,Anurupa Mitra,7,,2700,2024/06/01
+1193,Marcello Longo,4,,2500,2024/06/07
+1194,Anusuya Dutta,5,,2200,2024/07/03
+1195,Kristi Kuusik,6,,3500,2024/07/20
+1196,Sami Lundin,6,,2600,2024/09/22
+1197,Sabrina Baresi,6,,3600,2024/10/02
+1198,Lassi Santala,5,,3200,2024/10/21
+1199,Tara Kotadia,4,,2400,2024/11/06
+1200,Le Chu,3,,3600,2024/11/11

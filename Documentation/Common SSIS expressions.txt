@@ -1,0 +1,17 @@
+
+
+For Back Up Database Task:
+	Property:  	DestinationAutoFolderPath
+	Expression:	@[$Project::DB_Backup_Folder]
+
+For Source File Connections:
+	Property:	ConnectionString
+	Expression:	@[$Project::Source_Files_Folder]  +  @[User::IB_String] + "\\" +   @[$Package::Source_File_Name]
+
+For Error File Connections:
+	Property:	ConnectionString
+	Expression:	@[$Project::Error_Files_Folder] + @[System::PackageName] + "_" +  @[User::IB_String] + "_Errors.csv"
+
+
+Analysis Services : NT Service\MSSQLServerOLAPService
+           

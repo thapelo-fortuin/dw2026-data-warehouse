@@ -1,0 +1,2861 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/9/2019 10:38:06 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DESKTOP-KD25EBE"
+  DTS:CreatorName="DESKTOP-KD25EBE\rkwuser"
+  DTS:DTSID="{61ED7BA3-7A4A-44B2-AC1B-8E9D08A0F176}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="7177"
+  DTS:ObjectName="S1_Import_Stock_Items"
+  DTS:PackageType="5"
+  DTS:VersionBuild="99"
+  DTS:VersionGUID="{6F8C64F8-B801-491A-8053-EBD101B5C851}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Error File]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{93743DDE-04EA-48F1-9FA2-88A1BC17339C}"
+      DTS:ObjectName="Error File">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="7177"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0027__x0027_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\DW2026\ErrorFiles\Errors.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_Item_ID"
+              DTS:DTSID="{AC6F6DE3-89C8-4AC1-951D-61DD12B19A1C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_Item_Name"
+              DTS:DTSID="{7E0E36E1-1002-4AFC-94BA-061725B5CBD4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_Supplier_ID"
+              DTS:DTSID="{716F43A6-2638-485D-A01B-82EBF2A70457}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_Colour"
+              DTS:DTSID="{A2C9A9F2-6D70-4831-992B-33DAC1033364}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_Brand"
+              DTS:DTSID="{7F074BC5-2818-4F5D-9FE8-018021D93D54}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_Size"
+              DTS:DTSID="{B240EB25-0043-4F63-A0D6-8B75DD96FC6C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_IsChillerStock"
+              DTS:DTSID="{3D08EA10-4DDB-406A-BF9B-E32F0BF3C839}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="10"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_UnitPrice"
+              DTS:DTSID="{283D0D3B-78F0-42D2-B0F1-167688E3C851}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="10"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_RecommendedRetailPrice"
+              DTS:DTSID="{8A7811E9-69B6-4AAB-9E44-76AF5C74D904}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_MarketingComments"
+              DTS:DTSID="{0376CC83-A7B6-47AB-ACD8-61DC60E1938F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_Items_Tags"
+              DTS:DTSID="{63CF095E-5E02-4968-8B8C-1F45CD075882}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="IBPT_ID"
+              DTS:DTSID="{0FB689B5-784A-488F-BE64-FBB38D9B4558}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{AB2270CE-740F-4B87-8920-E266D2FDB0E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{433BFB74-994E-4A7C-A7AE-EC97EEE2E712}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorDescription"
+              DTS:DTSID="{A5D29505-3CD5-4B56-A109-B103C5E08815}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Source FIle]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C41DB251-9F2B-4C59-AA84-7B3257C9125B}"
+      DTS:ObjectName="Source FIle">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="7177"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0027__x0027_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\DW2026\SourceFiles\202412\SF_Stock_Items.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_Item_ID"
+              DTS:DTSID="{F3881DA7-3465-414B-A469-57EA57C1DBD1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_Item_Name"
+              DTS:DTSID="{4C27CF83-D482-42D7-B20C-9C66397DBAA8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_Supplier_ID"
+              DTS:DTSID="{9BDE682F-C9C9-4F48-8A22-2CCBF96CD401}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_Colour"
+              DTS:DTSID="{0EFE7400-120F-4A21-A7F9-8DD2E8353FFA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_Brand"
+              DTS:DTSID="{970087EC-FF2A-403E-8472-DFAB1E4D3C1E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="20"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_Size"
+              DTS:DTSID="{81319A26-DFC1-4890-ADEC-AC6AC26E8C08}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_IsChillerStock"
+              DTS:DTSID="{A7A7FFE2-4AAF-4C31-92BA-7DE64233B1A9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="10"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_UnitPrice"
+              DTS:DTSID="{9B81E39D-5ED4-4F30-8E6F-33D732D13B3B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="131"
+              DTS:DataPrecision="10"
+              DTS:DataScale="2"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_RecommendedRetailPrice"
+              DTS:DTSID="{A06C1646-65BB-4BF3-8A20-EAA70D0BE3E1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_item_MarketingComments"
+              DTS:DTSID="{D6D64ADC-C847-48DE-9E3A-33D986F6DE4B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Stock_Items_Tags"
+              DTS:DTSID="{F9EFCB67-451B-457D-9C65-1B0F5D3520C7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="3"
+      DTS:DTSID="{3C39571E-AC20-4682-B667-A9C82A836F0A}"
+      DTS:ObjectName="IBP_ID">
+      <DTS:Property
+        DTS:DataType="3"
+        DTS:Name="ParameterValue">0</DTS:Property>
+    </DTS:PackageParameter>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{E3B01C8D-8D1C-4CCC-9F29-BF6359490FD7}"
+      DTS:ObjectName="Source_File_Name">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue">SF_Customer.csv</DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{49800F12-A1FF-40F0-B34D-D10558E05B4F}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="GETDATE()"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="Current_DateTime">
+      <DTS:VariableValue
+        DTS:DataType="7">4/21/2026 10:19:56 PM</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{910C1E34-D0E5-4ED0-9363-2F80F4237B1B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="IBPT_ID">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{D7DB27F1-9FBA-40F2-8AE6-CF6BF90B2062}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="IBPT_Records_Failed">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{5FFB2B53-54FA-4023-8929-9CD2B2F28F0B}"
+      DTS:IncludeInDebugDump="6789"
+      DTS:Namespace="User"
+      DTS:ObjectName="IBPT_Records_In">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{1E88CD6E-2D6E-47DB-9742-9C417E9C970C}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="@[User::IBPT_Records_In]- @[User::IBPT_Records_Failed]"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="IBPT_Records_Out">
+      <DTS:VariableValue
+        DTS:DataType="3">0</DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{91BA4F47-7AD5-4530-A20D-2D21211EDDCA}"
+      DTS:EvaluateAsExpression="True"
+      DTS:Expression="(DT_WSTR, 4)( @[$Project::IB_Year]  ) +   (DT_WSTR, 2)( @[$Project::IB_Month]  )"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="IB_String">
+      <DTS:VariableValue
+        DTS:DataType="8">202412</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Create Import_Batch_Process_Task"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{5C5BB633-4327-48B7-9D56-77CEDC90A059}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Create Import_Batch_Process_Task"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{947E8243-F86E-4E5D-9037-5FE465FFB7DE}"
+          SQLTask:IsStoredProc="True"
+          SQLTask:SqlStatementSource="Create_Import_Batch_Process_Task" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="RC"
+            SQLTask:DtsVariableName="User::IBPT_ID"
+            SQLTask:ParameterDirection="ReturnValue"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBP_ID"
+            SQLTask:DtsVariableName="$Package::IBP_ID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBPT_Description"
+            SQLTask:DtsVariableName="System::PackageName"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="16"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBPT_Start"
+            SQLTask:DtsVariableName="User::Current_DateTime"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="6"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Import Sales Stock Items"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{E5C7A893-61AC-446E-A94D-9564556FBD14}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Import Sales Stock Items"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Import Sales Stock Items\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Import Sales Stock Items\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Derived Column.Inputs[Derived Column Input].Columns[Stock_item_Supplier_ID]"
+                      cachedDataType="i4"
+                      cachedName="Stock_item_Supplier_ID"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Supplier_ID]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Supplier_ID]},0)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Stock_item_Supplier_ID,0)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Derived Column.Inputs[Derived Column Input].Columns[Stock_item_Colour]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Stock_item_Colour"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Colour]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Colour]},"Unknown")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Stock_item_Colour,"Unknown")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Derived Column.Inputs[Derived Column Input].Columns[Stock_item_Brand]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Stock_item_Brand"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Brand]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Brand]},"No brand")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Stock_item_Brand,"No brand")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Derived Column.Inputs[Derived Column Input].Columns[Stock_item_Size]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Stock_item_Size"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Size]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Size]},"No size")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Stock_item_Size,"No size")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Derived Column.Inputs[Derived Column Input].Columns[Stock_item_IsChillerStock]"
+                      cachedDataType="i4"
+                      cachedName="Stock_item_IsChillerStock"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_IsChillerStock]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_IsChillerStock]},-1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Stock_item_IsChillerStock,-1)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Derived Column.Inputs[Derived Column Input].Columns[Stock_item_UnitPrice]"
+                      cachedDataType="numeric"
+                      cachedName="Stock_item_UnitPrice"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_UnitPrice]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_UnitPrice]},-1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Stock_item_UnitPrice,-1)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Derived Column.Inputs[Derived Column Input].Columns[Stock_item_RecommendedRetailPrice]"
+                      cachedDataType="numeric"
+                      cachedName="Stock_item_RecommendedRetailPrice"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_RecommendedRetailPrice]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_RecommendedRetailPrice]},-1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Stock_item_RecommendedRetailPrice,-1)</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Derived Column.Inputs[Derived Column Input].Columns[Stock_item_MarketingComments]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Stock_item_MarketingComments"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_MarketingComments]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_MarketingComments]},"No comments")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Stock_item_MarketingComments,"No comments")</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Derived Column.Inputs[Derived Column Input].Columns[Stock_Items_Tags]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Stock_Items_Tags"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_Items_Tags]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">[REPLACENULL](#{Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_Items_Tags]},"No tags")</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">REPLACENULL(Stock_Items_Tags,"No tags")</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Sales Stock Items\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Import Sales Stock Items\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Derived Column.Outputs[Derived Column Output].Columns[IBPT_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Import Sales Stock Items\Derived Column.Outputs[Derived Column Output].Columns[IBPT_ID]"
+                      name="IBPT_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">@[User::IBPT_ID]</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">@[User::IBPT_ID]</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Import Sales Stock Items\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Import Sales Stock Items\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Sales Stock Items\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Sales Stock Items\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Sales Stock Items\Flat File Source 1"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="7177"
+              name="Flat File Source 1"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Sales Stock Items\Flat File Source 1.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Source FIle]"
+                  connectionManagerRefId="Package.ConnectionManagers[Source FIle]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_Item_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_Item_ID]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_Item_ID]"
+                      name="Stock_Item_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_Item_Name]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_Item_Name]"
+                      length="50"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_Item_Name]"
+                      name="Stock_Item_Name"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Supplier_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_Supplier_ID]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Supplier_ID]"
+                      name="Stock_item_Supplier_ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Colour]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_Colour]"
+                      length="20"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Colour]"
+                      name="Stock_item_Colour"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Brand]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_Brand]"
+                      length="20"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Brand]"
+                      name="Stock_item_Brand"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Size]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_Size]"
+                      length="20"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Size]"
+                      name="Stock_item_Size"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_IsChillerStock]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_IsChillerStock]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_IsChillerStock]"
+                      name="Stock_item_IsChillerStock"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_UnitPrice]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_UnitPrice]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_UnitPrice]"
+                      name="Stock_item_UnitPrice"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_RecommendedRetailPrice]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_RecommendedRetailPrice]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_RecommendedRetailPrice]"
+                      name="Stock_item_RecommendedRetailPrice"
+                      precision="10"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_MarketingComments]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_MarketingComments]"
+                      length="100"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_MarketingComments]"
+                      name="Stock_item_MarketingComments"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_Items_Tags]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_Items_Tags]"
+                      length="50"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_Items_Tags]"
+                      name="Stock_Items_Tags"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_Item_ID]"
+                      dataType="i4"
+                      name="Stock_Item_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_Item_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Stock_Item_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_Supplier_ID]"
+                      dataType="i4"
+                      name="Stock_item_Supplier_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_Colour]"
+                      dataType="wstr"
+                      length="20"
+                      name="Stock_item_Colour" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_Brand]"
+                      dataType="wstr"
+                      length="20"
+                      name="Stock_item_Brand" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_Size]"
+                      dataType="wstr"
+                      length="20"
+                      name="Stock_item_Size" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_IsChillerStock]"
+                      dataType="i4"
+                      name="Stock_item_IsChillerStock" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_UnitPrice]"
+                      dataType="numeric"
+                      name="Stock_item_UnitPrice"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_RecommendedRetailPrice]"
+                      dataType="numeric"
+                      name="Stock_item_RecommendedRetailPrice"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_item_MarketingComments]"
+                      dataType="wstr"
+                      length="100"
+                      name="Stock_item_MarketingComments" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].ExternalColumns[Stock_Items_Tags]"
+                      dataType="wstr"
+                      length="50"
+                      name="Stock_Items_Tags" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Sales Stock Items\Get Error Description"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum.;Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;12"
+              description="Includes and runs custom script code. For example, apply a business rule that limits the range of valid values in an &quot;income&quot; column or add values in two columns and calculate the average of the sum."
+              name="Get Error Description"
+              version="14">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Stores the source code of the component"
+                  isArray="true"
+                  name="SourceCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="30">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\AssemblyInfo.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[using System.Reflection;
+using System.Runtime.CompilerServices;
+
+//
+// General Information about an assembly is controlled through the following 
+// set of attributes. Change these attribute values to modify the information
+// associated with an assembly.
+//
+[assembly: AssemblyTitle("SC_5a909b773a164575bb31e48eb6bd9709")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("")]
+[assembly: AssemblyProduct("SC_5a909b773a164575bb31e48eb6bd9709")]
+[assembly: AssemblyCopyright("Copyright @  2021")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+//
+// Version information for an assembly consists of the following four values:
+//
+//      Major Version
+//      Minor Version 
+//      Build Number
+//      Revision
+//
+// You can specify all the values or you can default the Revision and Build Numbers 
+// by using the '*' as shown below:
+
+[assembly: AssemblyVersion("1.0.0.0")]
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.resx]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+</root>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[main.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[#region Help:  Introduction to the Script Component
+/* The Script Component allows you to perform virtually any operation that can be accomplished in
+ * a .Net application within the context of an Integration Services data flow.
+ *
+ * Expand the other regions which have "Help" prefixes for examples of specific ways to use
+ * Integration Services features within this script component. */
+#endregion
+
+#region Namespaces
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+#endregion
+
+/// <summary>
+/// This is the class to which to add your code.  Do not change the name, attributes, or parent
+/// of this class.
+/// </summary>
+[Microsoft.SqlServer.Dts.Pipeline.SSISScriptComponentEntryPointAttribute]
+public class ScriptMain : UserComponent
+{
+    #region Help:  Using Integration Services variables and parameters
+    /* To use a variable in this script, first ensure that the variable has been added to
+     * either the list contained in the ReadOnlyVariables property or the list contained in
+     * the ReadWriteVariables property of this script component, according to whether or not your
+     * code needs to write into the variable.  To do so, save this script, close this instance of
+     * Visual Studio, and update the ReadOnlyVariables and ReadWriteVariables properties in the
+     * Script Transformation Editor window.
+     * To use a parameter in this script, follow the same steps. Parameters are always read-only.
+     *
+     * Example of reading from a variable or parameter:
+     *  DateTime startTime = Variables.MyStartTime;
+     *
+     * Example of writing to a variable:
+     *  Variables.myStringVariable = "new value";
+     */
+    #endregion
+
+    #region Help:  Using Integration Services Connnection Managers
+    /* Some types of connection managers can be used in this script component.  See the help topic
+     * "Working with Connection Managers Programatically" for details.
+     *
+     * To use a connection manager in this script, first ensure that the connection manager has
+     * been added to either the list of connection managers on the Connection Managers page of the
+     * script component editor.  To add the connection manager, save this script, close this instance of
+     * Visual Studio, and add the Connection Manager to the list.
+     *
+     * If the component needs to hold a connection open while processing rows, override the
+     * AcquireConnections and ReleaseConnections methods.
+     * 
+     * Example of using an ADO.Net connection manager to acquire a SqlConnection:
+     *  object rawConnection = Connections.SalesDB.AcquireConnection(transaction);
+     *  SqlConnection salesDBConn = (SqlConnection)rawConnection;
+     *
+     * Example of using a File connection manager to acquire a file path:
+     *  object rawConnection = Connections.Prices_zip.AcquireConnection(transaction);
+     *  string filePath = (string)rawConnection;
+     *
+     * Example of releasing a connection manager:
+     *  Connections.SalesDB.ReleaseConnection(rawConnection);
+     */
+    #endregion
+
+    #region Help:  Firing Integration Services Events
+    /* This script component can fire events.
+     *
+     * Example of firing an error event:
+     *  ComponentMetaData.FireError(10, "Process Values", "Bad value", "", 0, out cancel);
+     *
+     * Example of firing an information event:
+     *  ComponentMetaData.FireInformation(10, "Process Values", "Processing has started", "", 0, fireAgain);
+     *
+     * Example of firing a warning event:
+     *  ComponentMetaData.FireWarning(10, "Process Values", "No rows were received", "", 0);
+     */
+    #endregion
+
+    /// <summary>
+    /// This method is called once, before rows begin to be processed in the data flow.
+    ///
+    /// You can remove this method if you don't need to do anything here.
+    /// </summary>
+    public override void PreExecute()
+    {
+        base.PreExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called after all the rows have passed through this component.
+    ///
+    /// You can delete this method if you don't need to do anything here.
+    /// </summary>
+    public override void PostExecute()
+    {
+        base.PostExecute();
+        /*
+         * Add your code here
+         */
+    }
+
+    /// <summary>
+    /// This method is called once for every row that passes through the component from Input0.
+    ///
+    /// Example of reading a value from a column in the the row:
+    ///  string zipCode = Row.ZipCode
+    ///
+    /// Example of writing a value to a column in the row:
+    ///  Row.ZipCode = zipCode
+    /// </summary>
+    /// <param name="Row">The row that is currently passing through the component</param>
+    public override void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+        Row.ErrorDescription = this.ComponentMetaData.GetErrorDescription(Row.ErrorCode);
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[BufferWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services buffer wrappers
+*  This module defines classes for accessing data flow buffers
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+
+public class Input0Buffer: ScriptBuffer
+
+{
+    public Input0Buffer(PipelineBuffer Buffer, int[] BufferColumnIndexes, OutputNameMap OutputMap)
+        : base(Buffer, BufferColumnIndexes, OutputMap)
+    {
+    }
+
+    public Int32 ErrorCode
+    {
+        get
+        {
+            return Buffer.GetInt32(BufferColumnIndexes[0]);
+        }
+    }
+    public bool ErrorCode_IsNull
+    {
+        get
+        {
+            return IsNull(0);
+        }
+    }
+
+    public String ErrorDescription
+    {
+        set
+        {
+            this[1] = value;
+        }
+    }
+    public bool ErrorDescription_IsNull
+    {
+        set
+        {
+            if (value)
+            {
+                SetNull(1);
+            }
+            else
+            {
+                throw new InvalidOperationException("IsNull property cannot be set to False. Assign a value to the column instead.");
+            }
+        }
+    }
+
+    new public bool NextRow()
+    {
+        return base.NextRow();
+    }
+
+    new public bool EndOfRowset()
+    {
+        return base.EndOfRowset();
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[ComponentWrapper.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[/* THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT!
+*  Microsoft SQL Server Integration Services component wrapper
+*  This module defines the base class for your component
+*  THIS IS AUTO-GENERATED CODE THAT WILL BE OVERWRITTEN! DO NOT EDIT! */
+
+using System;
+using System.Data;
+using Microsoft.SqlServer.Dts.Pipeline;
+using Microsoft.SqlServer.Dts.Pipeline.Wrapper;
+using Microsoft.SqlServer.Dts.Runtime.Wrapper;
+
+public class UserComponent: ScriptComponent
+{
+    public Connections Connections;
+    public Variables Variables;
+    public UserComponent()
+    {
+        Connections = new Connections(this);
+        Variables = new Variables(this);
+    }
+
+    public override void ProcessInput(int InputID, string InputName, PipelineBuffer Buffer, OutputNameMap OutputMap)
+    {
+
+        if (InputName.Equals(@"Input 0", StringComparison.Ordinal))
+        {
+            Input0_ProcessInput(new Input0Buffer(Buffer, GetColumnIndexes(InputID), OutputMap));
+        }
+
+    }
+
+    public virtual void Input0_ProcessInput(Input0Buffer Buffer)
+    {
+        while (Buffer.NextRow())
+        {
+            Input0_ProcessInputRow(Buffer);
+        }
+    }
+
+    public virtual void Input0_ProcessInputRow(Input0Buffer Row)
+    {
+    }
+
+}
+
+public class Connections
+{
+    ScriptComponent ParentComponent;
+
+    public Connections(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+
+public class Variables
+{
+    ScriptComponent ParentComponent;
+
+    public Variables(ScriptComponent Component)
+    {
+        ParentComponent = Component;
+    }
+
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_5a909b773a164575bb31e48eb6bd9709.Properties.Settings.get_Default():SC_5a909b773a164575bb31e48eb6bd9709.Properties.Sett" +
+    "ings")]
+
+namespace SC_5a909b773a164575bb31e48eb6bd9709.Properties {
+    
+    
+    internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
+        
+        [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        private static Settings defaultInstance = new Settings();
+        
+        public static Settings Default {
+            get {
+                return defaultInstance;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Project]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF16LE]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="UTF-16" standalone="yes"?>
+<c:Project xmlns:c="http://schemas.microsoft.com/codeprojectml/2010/08/main" xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" runtimeVersion="4.0" schemaVersion="1.0">
+  <msb:PropertyGroup>
+    <msb:CodeName>SC_5a909b773a164575bb31e48eb6bd9709</msb:CodeName>
+    <msb:Language>msBuild</msb:Language>
+    <msb:DisplayName>SC_5a909b773a164575bb31e48eb6bd9709</msb:DisplayName>
+    <msb:ProjectId>{E8AED8A5-1635-4F89-8CCB-26D5AF05A3A9}</msb:ProjectId>
+  </msb:PropertyGroup>
+  <msb:ItemGroup>
+    <msb:Project Include="SC_5a909b773a164575bb31e48eb6bd9709.csproj" />
+    <msb:File Include="ComponentWrapper.cs" />
+    <msb:File Include="main.cs" />
+    <msb:File Include="BufferWrapper.cs" />
+    <msb:File Include="Properties\Settings.settings" />
+    <msb:File Include="Properties\AssemblyInfo.cs" />
+    <msb:File Include="Properties\Resources.resx" />
+    <msb:File Include="Properties\Resources.Designer.cs" />
+    <msb:File Include="Properties\Settings.Designer.cs" />
+  </msb:ItemGroup>
+</c:Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_5a909b773a164575bb31e48eb6bd9709.csproj]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectTypeGuids>{30D016F9-3734-4E33-A861-5E7D899E18F3};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{62cbd772-00bf-440d-a5bc-e595b345b767}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SC_5a909b773a164575bb31e48eb6bd9709</RootNamespace>
+    <AssemblyName>SC_5a909b773a164575bb31e48eb6bd9709</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>true</ResolveAssemblyReferenceIgnoreTargetFrameworkAttributeVersionMismatch>
+    <TargetFrameworkProfile></TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>.\bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <Optimize>true</Optimize>
+    <OutputPath>.\bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.SqlServer.TxScript, Version=17.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSRuntimeWrap, Version=17.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.DTSPipelineWrap, Version=17.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.SqlServer.PipelineHost, Version=17.0.0.0, Culture=Neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Compile Include="main.cs" />
+    <Compile Include="BufferWrapper.cs" />
+    <Compile Include="ComponentWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <!-- Include the build rules for a C# project.-->
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- This section defines VSTA properties that describe the host-changable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{30D016F9-3734-4E33-A861-5E7D899E18F3}">
+        <ProjectProperties HostName="ScriptComponent" HostPackage="{B3A685AA-7EAF-4BC6-9940-57959FA5AC07}" ApplicationType="usd" Language="cs" TemplatesPath="" DebugInfoExeName="" DebugInfoCommandLine="" DebugInfoWorkingDir="" IconImageList="" />
+        <Host Name="ScriptComponent" GeneratedNamespace="SC_5a909b773a164575bb31e48eb6bd9709" IconIndex="0"></Host>
+        <ProjectClient>
+          <HostIdentifier>SSIS_SC170</HostIdentifier>
+        </ProjectClient>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Settings.settings]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[<?xml version='1.0' encoding='iso-8859-1'?>
+<SettingsFile xmlns="uri:settings" CurrentProfile="(Default)">
+  <Profiles>
+    <Profile Name="(Default)" />
+  </Profiles>
+  <Settings />
+</SettingsFile>]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[Properties\Resources.Designer.cs]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[UTF8]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[//------------------------------------------------------------------------------
+// <auto-generated>
+//     This code was generated by a tool.
+//
+//     Changes to this file may cause incorrect behavior and will be lost if
+//     the code is regenerated.
+// </auto-generated>
+//------------------------------------------------------------------------------
+
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_5a909b773a164575bb31e48eb6bd9709.Properties.Resources.get_ResourceManager():System.Resources.Resou" +
+    "rceManager")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_5a909b773a164575bb31e48eb6bd9709.Properties.Resources.get_Culture():System.Globalization.CultureIn" +
+    "fo")]
+[assembly: global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode", Scope="member", Target="SC_5a909b773a164575bb31e48eb6bd9709.Properties.Resources.set_Culture(System.Globalization.CultureInfo" +
+    "):Void")]
+
+namespace SC_5a909b773a164575bb31e48eb6bd9709.Properties {
+    
+    
+    /// <summary>
+    ///   A strongly-typed resource class, for looking up localized strings, etc.
+    /// </summary>
+    // This class was auto-generated by the StronglyTypedResourceBuilder
+    // class via a tool like ResGen or Visual Studio.
+    // To add or remove a member, edit your .ResX file then rerun ResGen
+    // with the /str option, or rebuild your VS project.
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    internal class Resources {
+        
+        private static global::System.Resources.ResourceManager resourceMan;
+        
+        private static global::System.Globalization.CultureInfo resourceCulture;
+        
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
+        internal Resources() {
+        }
+        
+        /// <summary>
+        ///   Returns the cached ResourceManager instance used by this class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if ((resourceMan == null)) {
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("SC_5a909b773a164575bb31e48eb6bd9709.Properties.Resources", typeof(Resources).Assembly);
+                    resourceMan = temp;
+                }
+                return resourceMan;
+            }
+        }
+        
+        /// <summary>
+        ///   Overrides the current thread's CurrentUICulture property for all
+        ///   resource lookups using this strongly typed resource class.
+        /// </summary>
+        [global::System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
+                return resourceCulture;
+            }
+            set {
+                resourceCulture = value;
+            }
+        }
+    }
+}
+]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Stores the binary representation of the component"
+                  isArray="true"
+                  name="BinaryCode"
+                  state="cdata">
+                  <arrayElements
+                    arrayElementCount="2">
+                    <arrayElement
+                      dataType="System.String"><![CDATA[SC_5a909b773a164575bb31e48eb6bd9709.dll]]></arrayElement>
+                    <arrayElement
+                      dataType="System.String"><![CDATA[TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAgAAAAA4fug4AtAnNIbgBTM0hVGhpcyBwcm9ncmFtIGNhbm5vdCBiZSBydW4gaW4gRE9TIG1v
+ZGUuDQ0KJAAAAAAAAABQRQAATAEDAOoCuWkAAAAAAAAAAOAAIiALATAAABQAAAAIAAAAAAAAdjIA
+AAAgAAAAQAAAAAAAEAAgAAAAAgAABAAAAAAAAAAGAAAAAAAAAACAAAAAAgAAAAAAAAMAYIUAABAA
+ABAAAAAAEAAAEAAAAAAAABAAAAAAAAAAAAAAACQyAABPAAAAAEAAAEgEAAAAAAAAAAAAAAAAAAAA
+AAAAAGAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAIAAACAAAAAAAAAAAAAAACCAAAEgAAAAAAAAAAAAAAC50ZXh0AAAAfBIAAAAgAAAAFAAAAAIA
+AAAAAAAAAAAAAAAAACAAAGAucnNyYwAAAEgEAAAAQAAAAAYAAAAWAAAAAAAAAAAAAAAAAABAAABA
+LnJlbG9jAAAMAAAAAGAAAAACAAAAHAAAAAAAAAAAAAAAAAAAQAAAQgAAAAAAAAAAAAAAAAAAAABY
+MgAAAAAAAEgAAAACAAUAtCEAALgPAAABAAAAAAAAAGwxAAC4AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4CKBAAAAoqHgIoEQAACipiAwIoEgAACgNvBgAABm8TAAAK
+bwgAAAYqHgIoDAAABioqAgMEBSgUAAAKKlICexUAAAoCexYAAAoWlG8XAAAKKiICFigYAAAKKiYC
+FwMoGQAACipaAywIAhcoGgAACipyAQAAcHMbAAAKeh4CKBwAAAoqHgIoHQAACip+AigeAAAKAgJz
+EAAABn0BAAAEAgJzEQAABn0CAAAEKpIEcp4AAHAabx8AAAosFQIFAgMoIAAACg4EcwUAAAZvDgAA
+BipKKwcCA28PAAAGA28KAAAGLfEqBio6AighAAAKAgN9AwAABCo6AighAAAKAgN9BAAABCoeAigh
+AAAKKq5+BQAABC0ecq4AAHDQBwAAAigiAAAKbyMAAApzJAAACoAFAAAEfgUAAAQqGn4GAAAEKh4C
+gAYAAAQqGn4HAAAEKh4CKCUAAAoqLnMXAAAGgAcAAAQqAAAAQlNKQgEAAQAAAAAADAAAAHY0LjAu
+MzAzMTkAAAAABQBsAAAAjAUAACN+AAD4BQAA4AYAACNTdHJpbmdzAAAAANgMAAAgAQAAI1VTAPgN
+AAAQAAAAI0dVSUQAAAAIDgAAsAEAACNCbG9iAAAAAAAAAAIAAAFXFaABCQEAAAD6ATMAFgAAAQAA
+ACAAAAAIAAAABwAAABgAAAAPAAAAJQAAABAAAAADAAAABwAAAAgAAAABAAAABQAAAAEAAAAAADAD
+AQAAAAAABgAqAhYFBgC+AhYFBgB2AQMFDwCKBQAABgCjAeIDBgANAuIDBgDuAeIDBgClAuIDBgBK
+AuIDBgBjAuIDBgC6AeIDBgDVAfkCCgB+AsMACgCsBMMADgCdBMMACgBUBMMACgBQBsMABgATBpoD
+BgBZAQMFBgC9BDYFBgBIBM0DEgApARoDEgCKARoDEgARAbgDBgA+ARYFFgABAM0EBgD0A5oDBgAT
+A5oDBgA3BJoDBgDkAJoDBgCVAJoDBgDVBuIDAAAAAEcAAAAAAAEAAQABABAArQMAABAAAQABAAEA
+EACQBAAAOQABAAUAAQAQADIGAABFAAEADAABABAABwYAAEkAAwAQAAEAEADIBQAASQAEABEAAAAQ
+AD0FmQVJAAUAEgAAARAA9wWZBWEABwAWAAYABwZ/AAYAyAWDAAEAQAaHAAEAQAaHABEAoQOLABEA
+AQGPABEAdwCTAFAgAAAAAMYA3AIGAAEAWCAAAAAAxgDnAgYAAQBgIAAAAADGALIGlwABAHkgAAAA
+AIYY9gQGAAIAgSAAAAAAhhj2BCUAAgCMIAAAAACGCIcAnQAFAKEgAAAAAIYIWANHAAUAqiAAAAAA
+hggOBBAABQC0IAAAAACGCG0DoQAGAMsgAAAAAIYAyQZHAAcA0yAAAAAAhgAaBkcABwDbIAAAAACG
+GPYEBgAHAPsgAAAAAMYApQamAAcAICEAAAAAxgGeBpcACwAzIQAAAADGAbIGlwAMADUhAAAAAIYY
+9gSwAA0ARCEAAAAAhhj2BLAADgBTIQAAAACDGPYEBgAPAFshAAAAAJMIuQS2AA8AhyEAAAAAkwjp
+ALsADwCOIQAAAACTCPUAwAAPAJYhAAAAAJYIJgbGABAAnSEAAAAAhhj2BAYAEAClIQAAAACRGPwE
+ywAQAAAAAQDNBgAAAQCyBAAAAgDSBQAAAwBiBAAAAQDzAgAAAQDzAgAAAQBQAAAAAgC5AAAAAwCy
+BAAABABiBAAAAQCyBAAAAQDNBgAAAQBWBgAAAQBWBgAAAQDzAgkA9gQBABEA9gQGABkA9gQKACkA
+9gQQADEA9gQQADkA9gQQAEEA9gQQAEkA9gQQAFEA9gQQAFkA9gQQAGEA9gQQAGkA9gQGAJkA9gQG
+ALkA9gQVAMkA9gQGAIkA3AIGAIkA5wIGAIkAWAAbANEAIwQgAHEA9gQlAHEAsgQvAHEA0gUzAHkA
+GgA3AHEAggM8AHEAkQNBAHEAiQMBANkA9gQQAHEAyQZHAHEAGgZHAIkA9gQGAOEAAAZLAIkA5gVS
+AJEA9gQGAPEApwBYAPEA0QZfAKEA9gRlAMEA9gQGAC4ACwDqAC4AEwDzAC4AGwASAS4AIwAbAS4A
+KwBEAS4AMwBEAS4AOwBEAS4AQwAbAS4ASwBKAS4AUwBEAS4AWwBhAUMAYwCrAakAcwASAckAcwAS
+AeEAewCrAeMAawCrAQMAAQAHAAUACAAHAAAAiwDPAAAAXAPTAAAAJgTXAAAAcQPTAAAAvQTbAAAA
+CQHgAAAAKgblAAIABgADAAIABwAFAAEACAAHAAEACQAJAAIAEwALAAIAFAANAAEAFQANAAIAFgAP
+AASAAAABAAAAAAAAAAAAAAAAACMAAAAEAAAAAAAAAAAAAABtAG4AAAAAABEAAAAAAAAAAAAAAHYA
+YAYAAAAAEQAAAAAAAAAAAAAAdgB9BgAAAAAEAAAAAAAAAAAAAABtAJoDAAAAABEAAAAAAAAAAAAA
+AHYAbAQAAAAAAAAAAAEAAABHBQAAAAAAAABJRFRTQ29tcG9uZW50TWV0YURhdGExMDAAR2V0SW50
+MzIAU0NfNWE5MDliNzczYTE2NDU3NWJiMzFlNDhlYjZiZDk3MDkAPE1vZHVsZT4ASW5wdXRJRABn
+ZXRfQ29tcG9uZW50TWV0YURhdGEAbXNjb3JsaWIAZGVmYXVsdEluc3RhbmNlAGdldF9FcnJvckNv
+ZGUAUnVudGltZVR5cGVIYW5kbGUAR2V0VHlwZUZyb21IYW5kbGUASW5wdXROYW1lAE1pY3Jvc29m
+dC5TcWxTZXJ2ZXIuRHRzLlBpcGVsaW5lAFR5cGUAZ2V0X0N1bHR1cmUAc2V0X0N1bHR1cmUAcmVz
+b3VyY2VDdWx0dXJlAEFwcGxpY2F0aW9uU2V0dGluZ3NCYXNlAEVkaXRvckJyb3dzYWJsZVN0YXRl
+AENvbXBpbGVyR2VuZXJhdGVkQXR0cmlidXRlAERlYnVnZ2VyTm9uVXNlckNvZGVBdHRyaWJ1dGUA
+RGVidWdnYWJsZUF0dHJpYnV0ZQBFZGl0b3JCcm93c2FibGVBdHRyaWJ1dGUAQXNzZW1ibHlUaXRs
+ZUF0dHJpYnV0ZQBBc3NlbWJseVRyYWRlbWFya0F0dHJpYnV0ZQBUYXJnZXRGcmFtZXdvcmtBdHRy
+aWJ1dGUAQXNzZW1ibHlDb25maWd1cmF0aW9uQXR0cmlidXRlAEFzc2VtYmx5RGVzY3JpcHRpb25B
+dHRyaWJ1dGUAQ29tcGlsYXRpb25SZWxheGF0aW9uc0F0dHJpYnV0ZQBBc3NlbWJseVByb2R1Y3RB
+dHRyaWJ1dGUAQXNzZW1ibHlDb3B5cmlnaHRBdHRyaWJ1dGUAU1NJU1NjcmlwdENvbXBvbmVudEVu
+dHJ5UG9pbnRBdHRyaWJ1dGUAQXNzZW1ibHlDb21wYW55QXR0cmlidXRlAFJ1bnRpbWVDb21wYXRp
+YmlsaXR5QXR0cmlidXRlAFByZUV4ZWN1dGUAUG9zdEV4ZWN1dGUAdmFsdWUAU3lzdGVtLlJ1bnRp
+bWUuVmVyc2lvbmluZwBTdHJpbmcAU3lzdGVtLkNvbXBvbmVudE1vZGVsAFNDXzVhOTA5Yjc3M2Ex
+NjQ1NzViYjMxZTQ4ZWI2YmQ5NzA5LmRsbABnZXRfRXJyb3JDb2RlX0lzTnVsbABzZXRfRXJyb3JE
+ZXNjcmlwdGlvbl9Jc051bGwAU2V0TnVsbABzZXRfSXRlbQBTeXN0ZW0AcmVzb3VyY2VNYW4AU2Ny
+aXB0TWFpbgBTeXN0ZW0uQ29uZmlndXJhdGlvbgBTeXN0ZW0uR2xvYmFsaXphdGlvbgBTeXN0ZW0u
+UmVmbGVjdGlvbgBJbnZhbGlkT3BlcmF0aW9uRXhjZXB0aW9uAHNldF9FcnJvckRlc2NyaXB0aW9u
+AEdldEVycm9yRGVzY3JpcHRpb24AU3RyaW5nQ29tcGFyaXNvbgBDdWx0dXJlSW5mbwBPdXRwdXRO
+YW1lTWFwAE91dHB1dE1hcABNaWNyb3NvZnQuU3FsU2VydmVyLkRUU1BpcGVsaW5lV3JhcABJbnB1
+dDBCdWZmZXIAUGlwZWxpbmVCdWZmZXIAU2NyaXB0QnVmZmVyAGdldF9SZXNvdXJjZU1hbmFnZXIA
+TWljcm9zb2Z0LlNxbFNlcnZlci5EdHMuUGlwZWxpbmUuV3JhcHBlcgAuY3RvcgAuY2N0b3IAU3lz
+dGVtLkRpYWdub3N0aWNzAFN5c3RlbS5SdW50aW1lLkNvbXBpbGVyU2VydmljZXMAU3lzdGVtLlJl
+c291cmNlcwBTQ181YTkwOWI3NzNhMTY0NTc1YmIzMWU0OGViNmJkOTcwOS5Qcm9wZXJ0aWVzLlJl
+c291cmNlcy5yZXNvdXJjZXMARGVidWdnaW5nTW9kZXMAU0NfNWE5MDliNzczYTE2NDU3NWJiMzFl
+NDhlYjZiZDk3MDkuUHJvcGVydGllcwBWYXJpYWJsZXMAQnVmZmVyQ29sdW1uSW5kZXhlcwBHZXRD
+b2x1bW5JbmRleGVzAFNldHRpbmdzAEVxdWFscwBDb25uZWN0aW9ucwBPYmplY3QARW5kT2ZSb3dz
+ZXQAZ2V0X0RlZmF1bHQAVXNlckNvbXBvbmVudABQYXJlbnRDb21wb25lbnQAU2NyaXB0Q29tcG9u
+ZW50AE1pY3Jvc29mdC5TcWxTZXJ2ZXIuVHhTY3JpcHQATWljcm9zb2Z0LlNxbFNlcnZlci5QaXBl
+bGluZUhvc3QASW5wdXQwX1Byb2Nlc3NJbnB1dABJbnB1dDBfUHJvY2Vzc0lucHV0Um93AE5leHRS
+b3cAZ2V0X0Fzc2VtYmx5AAAAAICbSQBzAE4AdQBsAGwAIABwAHIAbwBwAGUAcgB0AHkAIABjAGEA
+bgBuAG8AdAAgAGIAZQAgAHMAZQB0ACAAdABvACAARgBhAGwAcwBlAC4AIABBAHMAcwBpAGcAbgAg
+AGEAIAB2AGEAbAB1AGUAIAB0AG8AIAB0AGgAZQAgAGMAbwBsAHUAbQBuACAAaQBuAHMAdABlAGEA
+ZAAuAAAPSQBuAHAAdQB0ACAAMAAAcVMAQwBfADUAYQA5ADAAOQBiADcANwAzAGEAMQA2ADQANQA3
+ADUAYgBiADMAMQBlADQAOABlAGIANgBiAGQAOQA3ADAAOQAuAFAAcgBvAHAAZQByAHQAaQBlAHMA
+LgBSAGUAcwBvAHUAcgBjAGUAcwAAkRRUME4Lx0a/bbG15tGH6gAEIAEBCAMgAAEFIAEBEREEIAEB
+DgUgAQERWQQgABJpBCABDggJIAMBEj0dCBJBAwYSPQMGHQgEIAEICAQgAQIIBSACAQgcAyAAAgYg
+AgIOEXUFIAEdCAgGAAESeRF9BSAAEoCBByACAQ4SgIEIt3pcVhk04IkIiYRdzYCAzJEDBhIUAwYS
+GAMGEkUDBhJRAwYSVQMGEiAFIAEBEgwDIAAIBCABAQIJIAQBCA4SPRJBBSABARJFBAAAElEEAAAS
+VQUAAQESVQQAABIgAwAAAQMoAAgDKAACAygADgQIABJRBAgAElUECAASIAgBAAgAAAAAAB4BAAEA
+VAIWV3JhcE5vbkV4Y2VwdGlvblRocm93cwEIAQACAAAAAAAoAQAjU0NfNWE5MDliNzczYTE2NDU3
+NWJiMzFlNDhlYjZiZDk3MDkAAAUBAAAAABYBABFDb3B5cmlnaHQgQCAgMjAyMQAASQEAGi5ORVRG
+cmFtZXdvcmssVmVyc2lvbj12NC43AQBUDhRGcmFtZXdvcmtEaXNwbGF5TmFtZRIuTkVUIEZyYW1l
+d29yayA0LjcEAQAAALQAAADOyu++AQAAAJEAAABsU3lzdGVtLlJlc291cmNlcy5SZXNvdXJjZVJl
+YWRlciwgbXNjb3JsaWIsIFZlcnNpb249NC4wLjAuMCwgQ3VsdHVyZT1uZXV0cmFsLCBQdWJsaWNL
+ZXlUb2tlbj1iNzdhNWM1NjE5MzRlMDg5I1N5c3RlbS5SZXNvdXJjZXMuUnVudGltZVJlc291cmNl
+U2V0AgAAAAAAAAAAAAAAUEFEUEFEULQAAABMMgAAAAAAAAAAAABmMgAAACAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAWDIAAAAAAAAAAAAAAABfQ29yRGxsTWFpbgBtc2NvcmVlLmRsbAAAAAAA/yUAIAAQ
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAQAQAAAAGAAAgAAAAAAAAAAAAAAAAAAAAQABAAAAMAAAgAAAAAAAAAAAAAAAAAAAAQAAAAAA
+SAAAAFhAAADsAwAAAAAAAAAAAADsAzQAAABWAFMAXwBWAEUAUgBTAEkATwBOAF8ASQBOAEYATwAA
+AAAAvQTv/gAAAQAAAAEAAAAAAAAAAQAAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAEQA
+AAABAFYAYQByAEYAaQBsAGUASQBuAGYAbwAAAAAAJAAEAAAAVAByAGEAbgBzAGwAYQB0AGkAbwBu
+AAAAAAAAALAETAMAAAEAUwB0AHIAaQBuAGcARgBpAGwAZQBJAG4AZgBvAAAAKAMAAAEAMAAwADAA
+MAAwADQAYgAwAAAAGgABAAEAQwBvAG0AbQBlAG4AdABzAAAAAAAAACIAAQABAEMAbwBtAHAAYQBu
+AHkATgBhAG0AZQAAAAAAAAAAAHAAJAABAEYAaQBsAGUARABlAHMAYwByAGkAcAB0AGkAbwBuAAAA
+AABTAEMAXwA1AGEAOQAwADkAYgA3ADcAMwBhADEANgA0ADUANwA1AGIAYgAzADEAZQA0ADgAZQBi
+ADYAYgBkADkANwAwADkAAAAwAAgAAQBGAGkAbABlAFYAZQByAHMAaQBvAG4AAAAAADEALgAwAC4A
+MAAuADAAAABwACgAAQBJAG4AdABlAHIAbgBhAGwATgBhAG0AZQAAAFMAQwBfADUAYQA5ADAAOQBi
+ADcANwAzAGEAMQA2ADQANQA3ADUAYgBiADMAMQBlADQAOABlAGIANgBiAGQAOQA3ADAAOQAuAGQA
+bABsAAAASAASAAEATABlAGcAYQBsAEMAbwBwAHkAcgBpAGcAaAB0AAAAQwBvAHAAeQByAGkAZwBo
+AHQAIABAACAAIAAyADAAMgAxAAAAKgABAAEATABlAGcAYQBsAFQAcgBhAGQAZQBtAGEAcgBrAHMA
+AAAAAAAAAAB4ACgAAQBPAHIAaQBnAGkAbgBhAGwARgBpAGwAZQBuAGEAbQBlAAAAUwBDAF8ANQBh
+ADkAMAA5AGIANwA3ADMAYQAxADYANAA1ADcANQBiAGIAMwAxAGUANAA4AGUAYgA2AGIAZAA5ADcA
+MAA5AC4AZABsAGwAAABoACQAAQBQAHIAbwBkAHUAYwB0AE4AYQBtAGUAAAAAAFMAQwBfADUAYQA5
+ADAAOQBiADcANwAzAGEAMQA2ADQANQA3ADUAYgBiADMAMQBlADQAOABlAGIANgBiAGQAOQA3ADAA
+OQAAADQACAABAFAAcgBvAGQAdQBjAHQAVgBlAHIAcwBpAG8AbgAAADEALgAwAC4AMAAuADAAAAA4
+AAgAAQBBAHMAcwBlAG0AYgBsAHkAIABWAGUAcgBzAGkAbwBuAAAAMQAuADAALgAwAC4AMAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAMAAAAeDIAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA]]></arrayElement>
+                  </arrayElements>
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the Microsoft Visual Studio Tools for Applications project. Project names must be unique within a package."
+                  name="VSTAProjectName"
+                  typeConverter="NOTBROWSABLE">SC_5a909b773a164575bb31e48eb6bd9709</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the programming language used by the script."
+                  name="ScriptLanguage"
+                  typeConverter="Microsoft.SqlServer.VSTAHosting.ScriptingLanguages">CSharp</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read-only variables."
+                  name="ReadOnlyVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a comma-separated list of read/write variables."
+                  name="ReadWriteVariables"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ScriptUIWriteableVariablePickerDlg"></property>
+                <property
+                  dataType="System.String"
+                  description="List of breakpoints present on the script."
+                  isArray="true"
+                  name="BreakpointCollection"
+                  typeConverter="NOTBROWSABLE">
+                  <arrayElements
+                    arrayElementCount="0" />
+                </property>
+                <property
+                  dataType="System.String"
+                  description="Checksum to match component metedata against compiled codes."
+                  name="MetadataChecksum140"
+                  typeConverter="NOTBROWSABLE">06</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.ScriptComponentHost</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Import Sales Stock Items\Get Error Description.Inputs[Input 0]"
+                  hasSideEffects="true"
+                  name="Input 0">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Get Error Description.Inputs[Input 0].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      lineageId="Package\Import Sales Stock Items\Load S1 Customer Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Sales Stock Items\Get Error Description.Outputs[Output 0]"
+                  name="Output 0"
+                  synchronousInputId="Package\Import Sales Stock Items\Get Error Description.Inputs[Input 0]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Get Error Description.Outputs[Output 0].Columns[ErrorDescription]"
+                      dataType="wstr"
+                      length="500"
+                      lineageId="Package\Import Sales Stock Items\Get Error Description.Outputs[Output 0].Columns[ErrorDescription]"
+                      name="ErrorDescription" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Sales Stock Items\Load S1 Customer Table"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="Load S1 Customer Table"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[S1_Customer]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Sales Stock Items\Load S1 Customer Table.Connections[OleDbConnection]"
+                  connectionManagerID="{AE22F4E9-E8F7-4FD3-AAF0-0E9A986F62FB}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[Stage1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import Sales Stock Items\Load S1 Customer Table.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="RedirectRow"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Load S1 Customer Table.Inputs[OLE DB Destination Input].Columns[IBPT_ID]"
+                      cachedDataType="i4"
+                      cachedName="IBPT_ID"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Load S1 Customer Table.Inputs[OLE DB Destination Input].ExternalColumns[IBPT_ID]"
+                      lineageId="Package\Import Sales Stock Items\Derived Column.Outputs[Derived Column Output].Columns[IBPT_ID]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Load S1 Customer Table.Inputs[OLE DB Destination Input].ExternalColumns[IBPT_ID]"
+                      dataType="i4"
+                      name="IBPT_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Load S1 Customer Table.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      dataType="i4"
+                      name="Customer_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Load S1 Customer Table.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Customer_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Load S1 Customer Table.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Category_ID]"
+                      dataType="i4"
+                      name="Customer_Category_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Load S1 Customer Table.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Buying_Group_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Customer_Buying_Group_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Load S1 Customer Table.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Credit_Limit]"
+                      dataType="numeric"
+                      name="Customer_Credit_Limit"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Load S1 Customer Table.Inputs[OLE DB Destination Input].ExternalColumns[Customer_Account_Opened_Date]"
+                      dataType="wstr"
+                      length="10"
+                      name="Customer_Account_Opened_Date" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Sales Stock Items\Load S1 Customer Table.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Import Sales Stock Items\Load S1 Customer Table.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Load S1 Customer Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Import Sales Stock Items\Load S1 Customer Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Import Sales Stock Items\Load S1 Customer Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Import Sales Stock Items\Load S1 Customer Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Sales Stock Items\Row Count"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Row Count">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::IBPT_Records_In</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Import Sales Stock Items\Row Count.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Sales Stock Items\Row Count.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Import Sales Stock Items\Row Count.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Sales Stock Items\Row Count Errors"
+              componentClassID="Microsoft.RowCount"
+              contactInfo="Row Count;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Counts rows as they pass through a data flow. For example, use the number of rows processed to determine whether or not to perform cleanup operations, or update text in an e-mail message to communicate processing status."
+              name="Row Count Errors">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable to hold the row count."
+                  name="VariableName">User::IBPT_Records_Failed</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Import Sales Stock Items\Row Count Errors.Inputs[Row Count Input 1]"
+                  hasSideEffects="true"
+                  name="Row Count Input 1">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Import Sales Stock Items\Row Count Errors.Outputs[Row Count Output 1]"
+                  name="Row Count Output 1"
+                  synchronousInputId="Package\Import Sales Stock Items\Row Count Errors.Inputs[Row Count Input 1]">
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Import Sales Stock Items\Write Errors"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="7177"
+              name="Write Errors"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Import Sales Stock Items\Write Errors.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Error File]"
+                  connectionManagerRefId="Package.ConnectionManagers[Error File]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].Columns[IBPT_ID]"
+                      cachedDataType="i4"
+                      cachedName="IBPT_ID"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[IBPT_ID]"
+                      lineageId="Package\Import Sales Stock Items\Derived Column.Outputs[Derived Column Output].Columns[IBPT_ID]" />
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Import Sales Stock Items\Load S1 Customer Table.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Import Sales Stock Items\Load S1 Customer Table.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]" />
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].Columns[ErrorDescription]"
+                      cachedDataType="wstr"
+                      cachedLength="500"
+                      cachedName="ErrorDescription"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorDescription]"
+                      lineageId="Package\Import Sales Stock Items\Get Error Description.Outputs[Output 0].Columns[ErrorDescription]" />
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].Columns[Stock_Item_ID]"
+                      cachedDataType="i4"
+                      cachedName="Stock_Item_ID"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_Item_ID]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_Item_ID]" />
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].Columns[Stock_Item_Name]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Stock_Item_Name"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_Item_Name]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_Item_Name]" />
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].Columns[Stock_item_Supplier_ID]"
+                      cachedDataType="i4"
+                      cachedName="Stock_item_Supplier_ID"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_Supplier_ID]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Supplier_ID]" />
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].Columns[Stock_item_Colour]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Stock_item_Colour"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_Colour]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Colour]" />
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].Columns[Stock_item_Brand]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Stock_item_Brand"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_Brand]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Brand]" />
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].Columns[Stock_item_Size]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="Stock_item_Size"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_Size]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_Size]" />
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].Columns[Stock_item_IsChillerStock]"
+                      cachedDataType="i4"
+                      cachedName="Stock_item_IsChillerStock"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_IsChillerStock]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_IsChillerStock]" />
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].Columns[Stock_item_UnitPrice]"
+                      cachedDataType="numeric"
+                      cachedName="Stock_item_UnitPrice"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_UnitPrice]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_UnitPrice]" />
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].Columns[Stock_item_RecommendedRetailPrice]"
+                      cachedDataType="numeric"
+                      cachedName="Stock_item_RecommendedRetailPrice"
+                      cachedPrecision="10"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_RecommendedRetailPrice]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_RecommendedRetailPrice]" />
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].Columns[Stock_item_MarketingComments]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="Stock_item_MarketingComments"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_MarketingComments]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_item_MarketingComments]" />
+                    <inputColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].Columns[Stock_Items_Tags]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Stock_Items_Tags"
+                      externalMetadataColumnId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_Items_Tags]"
+                      lineageId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output].Columns[Stock_Items_Tags]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[IBPT_ID]"
+                      dataType="i4"
+                      name="IBPT_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[ErrorDescription]"
+                      dataType="wstr"
+                      length="500"
+                      name="ErrorDescription" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_Item_ID]"
+                      dataType="i4"
+                      name="Stock_Item_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_Item_Name]"
+                      dataType="wstr"
+                      length="50"
+                      name="Stock_Item_Name" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_Supplier_ID]"
+                      dataType="i4"
+                      name="Stock_item_Supplier_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_Colour]"
+                      dataType="wstr"
+                      length="20"
+                      name="Stock_item_Colour" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_Brand]"
+                      dataType="wstr"
+                      length="20"
+                      name="Stock_item_Brand" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_Size]"
+                      dataType="wstr"
+                      length="20"
+                      name="Stock_item_Size" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_IsChillerStock]"
+                      dataType="i4"
+                      name="Stock_item_IsChillerStock" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_UnitPrice]"
+                      dataType="numeric"
+                      name="Stock_item_UnitPrice"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_RecommendedRetailPrice]"
+                      dataType="numeric"
+                      name="Stock_item_RecommendedRetailPrice"
+                      precision="10"
+                      scale="2" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_item_MarketingComments]"
+                      dataType="wstr"
+                      length="100"
+                      name="Stock_item_MarketingComments" />
+                    <externalMetadataColumn
+                      refId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input].ExternalColumns[Stock_Items_Tags]"
+                      dataType="wstr"
+                      length="50"
+                      name="Stock_Items_Tags" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Import Sales Stock Items.Paths[Derived Column Output]"
+              endId="Package\Import Sales Stock Items\Load S1 Customer Table.Inputs[OLE DB Destination Input]"
+              name="Derived Column Output"
+              startId="Package\Import Sales Stock Items\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Import Sales Stock Items.Paths[Flat File Source Output]"
+              endId="Package\Import Sales Stock Items\Row Count.Inputs[Row Count Input 1]"
+              name="Flat File Source Output"
+              startId="Package\Import Sales Stock Items\Flat File Source 1.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Import Sales Stock Items.Paths[OLE DB Destination Error Output]"
+              endId="Package\Import Sales Stock Items\Row Count Errors.Inputs[Row Count Input 1]"
+              name="OLE DB Destination Error Output"
+              startId="Package\Import Sales Stock Items\Load S1 Customer Table.Outputs[OLE DB Destination Error Output]" />
+            <path
+              refId="Package\Import Sales Stock Items.Paths[Output 0]"
+              endId="Package\Import Sales Stock Items\Write Errors.Inputs[Flat File Destination Input]"
+              name="Output 0"
+              startId="Package\Import Sales Stock Items\Get Error Description.Outputs[Output 0]" />
+            <path
+              refId="Package\Import Sales Stock Items.Paths[Row Count Output 1]"
+              endId="Package\Import Sales Stock Items\Get Error Description.Inputs[Input 0]"
+              name="Row Count Output 1"
+              startId="Package\Import Sales Stock Items\Row Count Errors.Outputs[Row Count Output 1]" />
+            <path
+              refId="Package\Import Sales Stock Items.Paths[Row Count Output 11]"
+              endId="Package\Import Sales Stock Items\Derived Column.Inputs[Derived Column Input]"
+              name="Row Count Output 1"
+              startId="Package\Import Sales Stock Items\Row Count.Outputs[Row Count Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Import_Batch_Process_Task Failure"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E980E628-0822-48CE-B8BA-6D5516987242}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Import_Batch_Process_Task Failure"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{947E8243-F86E-4E5D-9037-5FE465FFB7DE}"
+          SQLTask:SqlStatementSource="Update Import_Batch_Process_Task set &#xA;    IBPT_End = @IBPT_End,&#xA;    IBPT_Status = 'Failed'&#xA; Where IBPT_ID = @IBPT_ID" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="@IBPT_End"
+            SQLTask:DtsVariableName="User::Current_DateTime"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="6"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBPT_ID"
+            SQLTask:DtsVariableName="User::IBPT_ID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Update Import_Batch_Process_Task Success"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{93FFCA22-5014-4DF5-B5F7-A469097289D1}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Update Import_Batch_Process_Task Success"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2017 RC1; © 2017 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="1">
+      <DTS:Variables />
+      <DTS:LoggingOptions
+        DTS:FilterKind="0" />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{947E8243-F86E-4E5D-9037-5FE465FFB7DE}"
+          SQLTask:SqlStatementSource="Update Import_Batch_Process_Task set &#xA;    IBPT_End = @IBPT_End,&#xA;    IBPT_Status = 'Completed',&#xA;    IBPT_Records_In =  @IBPT_Records_In,&#xA;    IBPT_Records_Failed = @IBPT_Records_Failed,&#xA;    IBPT_Records_Out = @IBPT_Records_Out&#xA; Where IBPT_ID = @IBPT_ID" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask">
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="@IBPT_End"
+            SQLTask:DtsVariableName="User::Current_DateTime"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="6"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBPT_Records_In"
+            SQLTask:DtsVariableName="User::IBPT_Records_In"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBPT_Records_Failed"
+            SQLTask:DtsVariableName="User::IBPT_Records_Failed"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBPT_Records_Out"
+            SQLTask:DtsVariableName="User::IBPT_Records_Out"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+          <SQLTask:ParameterBinding
+            SQLTask:ParameterName="IBPT_ID"
+            SQLTask:DtsVariableName="User::IBPT_ID"
+            SQLTask:ParameterDirection="Input"
+            SQLTask:DataType="11"
+            SQLTask:ParameterSize="-1" />
+        </SQLTask:SqlTaskData>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{4A36DF46-B928-4D42-A945-658A8787263A}"
+      DTS:From="Package\Create Import_Batch_Process_Task"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Import Sales Stock Items" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{E1EA9209-7B28-4C44-9DF3-5A753771F85C}"
+      DTS:From="Package\Import Sales Stock Items"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Update Import_Batch_Process_Task Success" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{7120F172-5770-428A-B8D6-57B52D247809}"
+      DTS:From="Package\Import Sales Stock Items"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\Update Import_Batch_Process_Task Failure"
+      DTS:Value="1" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="256,41.6"
+          Id="Package\Create Import_Batch_Process_Task"
+          TopLeft="198.428574620461,15.8901950745984" />
+        <NodeLayout
+          Size="193.6,41.6"
+          Id="Package\Import Sales Stock Items"
+          TopLeft="234.428571410325,85.4117646985093" />
+        <NodeLayout
+          Size="284,41.6"
+          Id="Package\Update Import_Batch_Process_Task Failure"
+          TopLeft="392.384615312238,187.448869628749" />
+        <NodeLayout
+          Size="305.6,41.6"
+          Id="Package\Update Import_Batch_Process_Task Success"
+          TopLeft="30.791208816145,189.982806279663" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="328.828573015393,57.4901950745984">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.9215696239109"
+              Start="0,0"
+              End="0,20.4215696239109">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4215696239109" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="300.295238076992,127.011764698509">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-116.704029260847,62.9710415811537"
+              Start="0,0"
+              End="-116.704029260847,55.4710415811537">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.4981102795819" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,21.4981102795819"
+                    Point2="0,25.4981102795819"
+                    Point3="-4,25.4981102795819" />
+                  <mssgle:LineSegment
+                    End="-112.704029260847,25.4981102795819" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-112.704029260847,25.4981102795819"
+                    Point2="-116.704029260847,25.4981102795819"
+                    Point3="-116.704029260847,29.4981102795819" />
+                  <mssgle:LineSegment
+                    End="-116.704029260847,55.4710415811537" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="362.161904743658,127.011764698509">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="172.22271056858,60.4371049302397"
+              Start="0,0"
+              End="172.22271056858,52.9371049302397">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,20.4720736356872" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,20.4720736356872"
+                    Point2="0,24.4720736356872"
+                    Point3="4,24.4720736356872" />
+                  <mssgle:LineSegment
+                    End="168.22271056858,24.4720736356872" />
+                  <mssgle:CubicBezierSegment
+                    Point1="168.22271056858,24.4720736356872"
+                    Point2="172.22271056858,24.4720736356872"
+                    Point3="172.22271056858,28.4720736356872" />
+                  <mssgle:LineSegment
+                    End="172.22271056858,52.9371049302397" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="70.8700076280399,29.4720736356872,30.4826953125,9.7490234375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Import Sales Stock Items">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\Import Sales Stock Items\Row Count Errors"
+          TopLeft="312.142857126131,342.52941179755" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\Import Sales Stock Items\Row Count"
+          TopLeft="332,105" />
+        <NodeLayout
+          Size="135.2,41.6"
+          Id="Package\Import Sales Stock Items\Write Errors"
+          TopLeft="330.000000702483,483.929411489885" />
+        <NodeLayout
+          Size="177.6,41.6"
+          Id="Package\Import Sales Stock Items\Get Error Description"
+          TopLeft="313.428571420969,413.588235324281" />
+        <NodeLayout
+          Size="193.6,41.6"
+          Id="Package\Import Sales Stock Items\Load S1 Customer Table"
+          TopLeft="308.571429228296,265.505882138447" />
+        <NodeLayout
+          Size="153.6,41.6"
+          Id="Package\Import Sales Stock Items\Derived Column"
+          TopLeft="321.142857136775,183.705882411927" />
+        <EdgeLayout
+          Id="Package\Import Sales Stock Items.Paths[Row Count Output 11]"
+          TopLeft="397.371428568387,146.6">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,37.105882411927"
+              Start="0,0"
+              End="0,29.605882411927">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.605882411927" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Sales Stock Items.Paths[Row Count Output 1]"
+          TopLeft="392.942857126131,384.12941179755">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="9.28571429483742,29.4588235267306"
+              Start="0,0"
+              End="9.28571429483742,21.9588235267306">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.7294117633653" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.7294117633653"
+                    Point2="0,14.7294117633653"
+                    Point3="4,14.7294117633653" />
+                  <mssgle:LineSegment
+                    End="5.28571429483742,14.7294117633653" />
+                  <mssgle:CubicBezierSegment
+                    Point1="5.28571429483742,14.7294117633653"
+                    Point2="9.28571429483742,14.7294117633653"
+                    Point3="9.28571429483742,18.7294117633653" />
+                  <mssgle:LineSegment
+                    End="9.28571429483742,21.9588235267306" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Sales Stock Items.Paths[Output 0]"
+          TopLeft="399.914286061726,455.188235324281">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,28.741176165604"
+              Start="0,0"
+              End="0,21.241176165604">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,21.241176165604" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Sales Stock Items.Paths[OLE DB Destination Error Output]"
+          TopLeft="405.371429228296,307.105882138447">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-12.428572102165,35.4235296591029"
+              Start="0,0"
+              End="-12.428572102165,27.9235296591029">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.7117648295515" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.7117648295515"
+                    Point2="0,17.7117648295515"
+                    Point3="-4,17.7117648295515" />
+                  <mssgle:LineSegment
+                    End="-8.42857210216499,17.7117648295515" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-8.42857210216499,17.7117648295515"
+                    Point2="-12.428572102165,17.7117648295515"
+                    Point3="-12.428572102165,21.7117648295515" />
+                  <mssgle:LineSegment
+                    End="-12.428572102165,27.9235296591029" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-79.4231923010825,22.7117648295515,146.4178125,11.43359375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Import Sales Stock Items.Paths[Derived Column Output]"
+          TopLeft="401.657143182535,225.305882411927">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.19999972652"
+              Start="0,0"
+              End="0,32.69999972652">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.69999972652" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="160,41.6"
+          Id="Package\Import Sales Stock Items\Flat File Source 1"
+          TopLeft="310.83331635015,32.9999998372793" />
+        <EdgeLayout
+          Id="Package\Import Sales Stock Items.Paths[Flat File Source Output]"
+          TopLeft="393.816658175075,74.5999998372793">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,30.4000001627207"
+              Start="0,0"
+              End="0,22.9000001627207">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,22.9000001627207" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Import Sales Stock Items\Load S1 Customer Table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

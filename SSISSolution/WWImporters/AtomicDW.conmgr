@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="AtomicDW.Net"
+  DTS:DTSID="{A8CB978E-DC44-4670-B564-C25E11DC25C4}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-78QVLSV;Initial Catalog=AtomicDW;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-WWImporters-{A8CB978E-DC44-4670-B564-C25E11DC25C4}THAPELO\SQLEXPRESS.AtomicDW;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

@@ -1,0 +1,24 @@
+PersonID,FullName,PreferredName,IsSystemUser,IsEmployee,IsSalesperson,EmailAddress
+2,Kayla Woodcock,Kayla,1,1,1,kaylaw@wideworldimporters.com
+3,Hudson Onslow,Hudson,1,1,1,hudsono@wideworldimporters.com
+4,Isabella Rupp,Isabella,1,1,0,isabellar@wideworldimporters.com
+5,Eva Muirden,Eva,1,1,0,evam@wideworldimporters.com
+6,Sophia Hinton,Sophia,1,1,1,sophiah@wideworldimporters.com
+7,Amy Trefl,Amy,1,1,1,amyt@wideworldimporters.com
+8,Anthony Grosse,Anthony,1,1,1,anthonyg@wideworldimporters.com
+9,Alica Fatnowna,Alica,1,1,0,alicaf@wideworldimporters.com
+10,Stella Rosenhain,Stella,1,1,0,stellar@wideworldimporters.com
+11,Ethan Onslow,Ethan,1,1,0,ethano@wideworldimporters.com
+12,Henry Forlonge,Henry,1,1,1,henryf@wideworldimporters.com
+13,Hudson Hollinworth,Huddy,1,1,1,hudsonh@wideworldimporters.com
+14,Lily Code,Lily,1,1,1,lilyc@wideworldimporters.com
+15,Taj Shand,Taj,1,1,1,tajs@wideworldimporters.com
+16,Archer Lamble,Archer,1,1,1,archerl@wideworldimporters.com
+17,Piper Koch,Piper,1,1,0,piperk@wideworldimporters.com
+18,Katie Darwin,Katie,1,1,0,katied@wideworldimporters.com
+19,Jai Shand,Jai,1,1,0,jais@wideworldimporters.com
+20,Jack Potter,Jack,1,1,1,jackp@wideworldimporters.com
+,Marcos Costa,Marcos,1,0,0,marcosc@nodpublishers.com
+47,John Smith,,,,,
+48,Emma Smith,Emma,1,1,0,emmas@wideworldimporters.com
+49,TJ Louw,TJ,1,1,1,

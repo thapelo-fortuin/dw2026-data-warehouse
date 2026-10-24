@@ -1,0 +1,4 @@
+"Customer_ID","Customer_Name","Customer_Category_ID","Customer_Buying_Group_Name","Customer_Credit_Limit","Customer_Account_Opened_Date","ErrorDescription"
+"1","Tailspin Toys (Head Office)","99","Tailspin Toys","-1.00","1900-01-01","Quality screen: No Customer Category ID99"
+"904","Olafs Rozitis","7","*Unknown","4000.00","1900-01-01","Quality screen: No Customer Category ID7"
+"1171","Miloslav Fisar","6","*Unknown","3400.00","1900-01-01","Quality screen: No Customer Category ID6"

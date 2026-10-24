@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="Stage2"
+  DTS:DTSID="{D7F382B3-657D-4F44-B3FD-2F1D3FEFE092}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=DESKTOP-78QVLSV;Initial Catalog=Stage2;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-WWImporters-{D7F382B3-657D-4F44-B3FD-2F1D3FEFE092}THAPELO\SQLEXPRESS.Stage2;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>

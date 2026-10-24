@@ -1,0 +1,310 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="3f042fb0-c5d5-4a5a-b091-e3484a7b8312" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Stock Item</ID>
+  <Name>Stock Item</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2481" scrolltop="-8414" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9790" y="21828" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Stock_Item" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="4789" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000b512000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Stock_Item" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2481</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-8414</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="3747e0ff-c07b-4687-866b-feb8d09ceb34">
+    <DataSourceViewID>Atomic DW</DataSourceViewID>
+  </Source>
+  <ErrorConfiguration dwd:design-time-name="87ccfd16-2214-4f6d-8611-6875486ead2f">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="9e05f07d-6947-4bb4-a1b4-f05f5c9a868e">
+      <ID>Stock Item Key</ID>
+      <Name>Stock Item Key</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="eb7cf308-9a36-430d-9fb0-a2240677975a">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2081a3ac-05a3-4ed7-a586-3c56d2184a72">
+            <TableID>dbo_Stock_Item</TableID>
+            <ColumnID>Stock_Item_Key</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="653834e9-e779-4123-84a7-321b3fc3403f">
+          <AttributeID>Stock Item Name</AttributeID>
+          <Name>Stock Item Name</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="4beaeb08-f122-4bf5-a0c3-22d8c420f110">
+          <AttributeID>Supplier ID</AttributeID>
+          <Name>Supplier ID</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="1642d4eb-2fa0-4de0-be4f-b84a24adacec">
+          <AttributeID>Stock Item Colour</AttributeID>
+          <Name>Stock Item Colour</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="9d1ca23d-77da-4d5d-8830-cc6ad02f3150">
+          <AttributeID>Stock Item Brand</AttributeID>
+          <Name>Stock Item Brand</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="906cadf4-71bc-4ac2-801e-f8cd8f8a2796">
+          <AttributeID>Stock Item Size</AttributeID>
+          <Name>Stock Item Size</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="c1dbd00d-2d1e-4944-9a3d-3a9731150189">
+          <AttributeID>Chiller Stock Indicator</AttributeID>
+          <Name>Chiller Stock Indicator</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8fefe60c-1dfb-4f69-91d3-f584dfe2ad5a">
+          <AttributeID>Recommended Retail Price</AttributeID>
+          <Name>Recommended Retail Price</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="7e3a0bfc-a805-4d67-9426-6b6a6c1410d1">
+          <AttributeID>Marketing Comments</AttributeID>
+          <Name>Marketing Comments</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="91ccea18-f571-4658-a74b-1e12f64bf3f6">
+          <AttributeID>Stock Item Tags</AttributeID>
+          <Name>Stock Item Tags</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="53ea2fae-b0d9-4be6-a40c-be3eb30de41f">
+          <AttributeID>Stock Item Unit Price</AttributeID>
+          <Name>Stock Item Unit Price</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <AttributeHierarchyVisible>false</AttributeHierarchyVisible>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0572bbe2-7efa-46f2-ab41-b2a5e5719d44">
+      <ID>Stock Item Name</ID>
+      <Name>Stock Item Name</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c3584c32-974c-4cac-808a-7827140f1ff4">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9821f8f6-e00c-430f-9ead-946e16459e13">
+            <TableID>dbo_Stock_Item</TableID>
+            <ColumnID>Stock_Item_Name</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e2a1f52c-979d-4de1-9f08-caac6d8c7c94">
+      <ID>Supplier ID</ID>
+      <Name>Supplier ID</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9613e588-8f5a-4ae8-b2f3-64ecea9af2b9">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9c7aeb9a-02dd-4f8f-ad89-29bbc3c99f23">
+            <TableID>dbo_Stock_Item</TableID>
+            <ColumnID>Supplier_ID</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="653210bb-32fa-46ed-b167-e2e4f55e85ff">
+      <ID>Stock Item Colour</ID>
+      <Name>Stock Item Colour</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5c6885d0-2c69-4236-9707-7530ef5635d6">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="9017c3db-de6f-4d79-84ef-af45968877d1">
+            <TableID>dbo_Stock_Item</TableID>
+            <ColumnID>Stock_Item_Colour</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="efb24273-8779-4afd-8712-9db97b6afdfc">
+      <ID>Stock Item Brand</ID>
+      <Name>Stock Item Brand</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="9ccdefe9-2a11-440e-a26a-e21c5fdf7fab">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6eeec816-b6da-4b0c-a703-59d956139d71">
+            <TableID>dbo_Stock_Item</TableID>
+            <ColumnID>Stock_Item_Brand</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0e76aaf8-5533-44c4-b6e5-c3ada9c1474a">
+      <ID>Stock Item Size</ID>
+      <Name>Stock Item Size</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="f69a5764-8185-4f80-8e44-6d51d78b7c0f">
+          <DataType>WChar</DataType>
+          <DataSize>20</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5e4771e5-0230-4a9e-bd1b-e8404b99df42">
+            <TableID>dbo_Stock_Item</TableID>
+            <ColumnID>Stock_Item_Size</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="ba9f7054-8bdb-48fa-8ddb-9a7fc2406072">
+      <ID>Chiller Stock Indicator</ID>
+      <Name>Chiller Stock Indicator</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="ceb0d03a-246b-493f-8dde-a063184b3440">
+          <DataType>WChar</DataType>
+          <DataSize>50</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2f7313b0-b379-48e8-820a-72e3d0e18b15">
+            <TableID>dbo_Stock_Item</TableID>
+            <ColumnID>Chiller_Stock_Indicator</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e43325bf-0f52-4fe0-91b6-84cffb715adc">
+      <ID>Recommended Retail Price</ID>
+      <Name>Recommended Retail Price</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="30264c4b-531e-4306-85cd-b13b89096116">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0c50a58a-b0de-4b2f-b4c4-0fea0b107002">
+            <TableID>dbo_Stock_Item</TableID>
+            <ColumnID>Recommended_Retail_Price</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="0e7a9b41-42f2-41bb-8beb-e7cc2840aa9d">
+      <ID>Marketing Comments</ID>
+      <Name>Marketing Comments</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5a24146c-aeec-4786-b7bb-3a503d10bee5">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="a78293d3-e699-41ae-a1fa-cfc444ffe378">
+            <TableID>dbo_Stock_Item</TableID>
+            <ColumnID>Marketing_Comments</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="e7593ce8-9c06-4d89-8c3f-e379bb909f39">
+      <ID>Stock Item Tags</ID>
+      <Name>Stock Item Tags</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="5d42ef28-01b5-4fbe-a7d3-56ab9d4e6a6c">
+          <DataType>WChar</DataType>
+          <DataSize>100</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="03121d56-8d49-43e4-b2d5-471a3b89f07f">
+            <TableID>dbo_Stock_Item</TableID>
+            <ColumnID>Stock_Item_Tags</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="9b6f57d0-020f-4821-a4d9-380a52b356da">
+      <ID>Stock Item Unit Price</ID>
+      <Name>Stock Item Unit Price</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="b5f24c34-c85f-4bcb-862e-bdcbca0e0337">
+          <DataType>Double</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6a623669-dda6-4fdc-b0f6-206c7c039ac3">
+            <TableID>dbo_Stock_Item</TableID>
+            <ColumnID>Stock_Item_Unit_Price</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

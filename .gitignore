@@ -1,0 +1,21 @@
+
+# Local and generated files excluded from the showcase import
+.git/
+.idea/
+.gradle/
+.vs/
+**/build/
+**/bin/
+**/obj/
+node_modules/
+local.properties
+.env
+.env.*
+*.user
+*.suo
+*.log
+*.db
+*.sqlite
+*.bak
+*.jks
+*.keystore
